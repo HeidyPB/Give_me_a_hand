@@ -1,0 +1,8 @@
+<div id="simple-form">
+  <%= simple_form_for(@meeting) do |f| %>
+  <%= f.input :title , input_html: { class:"text-dark"}%>
+  <%= f.input :description %>
+  <%= f.input :date %>
+  <%= f.submit %>
+  <% end %>
+</div>
