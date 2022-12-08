@@ -3,8 +3,4 @@ class PagesController < ApplicationController
 
   def home
   end
-
-  # def friends
-  #   @friends = User.where(friend: true)
-  # end
 end
