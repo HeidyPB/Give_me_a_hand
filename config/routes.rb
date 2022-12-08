@@ -2,13 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get 'friends', to: 'friends#index'
-  get "friends/:id", to: "friends#show"
-
+  get 'users/:id/meeting', to: 'meetings#show', as: :meeting
+  
   resources :friends, only: [:show] do
-    resources :meetings, only: %i[new create]
+    resources :meetings, only: %i[new create show]
   end
 
-  resources :meetings, only: [:show]
+  # resources :meetings, only: [:show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
