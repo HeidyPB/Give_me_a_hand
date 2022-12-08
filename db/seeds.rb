@@ -113,7 +113,6 @@ User.create!(
   longitude: 555.0
 )
 
-
 User.create!(
   email: "etienne@hotmail.com",
   password: 123456,

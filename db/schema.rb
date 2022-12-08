@@ -38,6 +38,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_200629) do
     t.index ["user_id"], name: "index_meetings_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "commentary"
+    t.integer "rating"
+    t.bigint "user_id", null: false
+    t.bigint "friend_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_reviews_on_friend_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "user_categories", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.bigint "user_id", null: false
@@ -79,6 +90,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_200629) do
 
   add_foreign_key "meetings", "users"
   add_foreign_key "meetings", "users", column: "friend_id"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "users", column: "friend_id"
   add_foreign_key "user_categories", "categories"
   add_foreign_key "user_categories", "users"
   add_foreign_key "user_languages", "languages"

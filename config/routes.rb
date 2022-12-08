@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   # meetings routes
   get 'users/:id/meeting', to: 'meetings#show', as: :meeting
 
+  # reviews routes
+  get 'users/:id/reviews/new', to: 'reviews#new', as: :review_new
+  post 'users/:id/reviews', to: 'reviews#create', as: :review_create
+  get 'users/:id/reviews', to: 'reviews#show', as: :review
+
   # nested routes
   resources :friends, only: [:show] do
     resources :meetings, only: %i[new create]
@@ -20,4 +25,5 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
+
 end
