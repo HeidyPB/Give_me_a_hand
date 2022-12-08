@@ -12,27 +12,112 @@ User.destroy_all
 puts "Creating users.."
 
 User.create!(
-  email:"pao@hotmail.com",
-  password:123456,
-  username:"pao",
+  email:"heidy@hotmail.com",
+  password: 123456,
+  username: "Heidy",
   friend: false,
-  origin: "Colombien",
-  province: "armenia",
-  address: "villa",
+  origin: "Colombienne",
+  province: "Cartagena",
+  address: "Chateau De Saint Felipe",
+  latitude: 1.1,
+  longitude: 111.0
+)
+
+User.create!(
+  email: "estuardo@hotmail.com",
+  password: 123456,
+  username: "estuardo",
+  friend: true,
+  origin: "Canadien",
+  province: "Quebec",
+  address: "Montegerie",
   latitude: 1.1,
   longitude: 222.0
-
 )
+
 User.create!(
-  email:"friend@hotmail.com",
-  password:123456,
-  username:"pao",
+  email:"paula@hotmail.com",
+  password: 123456,
+  username: "paula",
+  friend: true,
+  origin: "Colombiene",
+  province: "Quebec",
+  address: "ile de soeurs",
+  latitude: 1.1,
+  longitude: 111.0
+)
+
+User.create!(
+  email: "felipe@hotmail.com",
+  password: 123456,
+  username: "Felipe",
   friend: true,
   origin: "Colombien",
-  province: "armenia",
-  address: "villa",
-  latitude: 1.1,
-  longitude: 222.0
+  province: "Ontario",
+  address: "Niagara",
+  latitude: 3.1,
+  longitude: 333.0
+)
+
+User.create!(
+  email: "andres@hotmail.com",
+  password: 123456,
+  username: "Andres",
+  friend: true,
+  origin: "Mexicain",
+  province: "British Columbia",
+  address: "Vancouver",
+  latitude: 4.1,
+  longitude: 444.0
+)
+
+User.create!(
+  email: "sebastian@hotmail.com",
+  password: 123456,
+  username: "Sebastien",
+  friend: true,
+  origin: "France",
+  province: "saskatchewan",
+  address: "Down town",
+  latitude: 5.1,
+  longitude: 555.0
+)
+
+User.create!(
+  email: "Hamza@hotmail.com",
+  password: 123456,
+  username: "Hamza",
+  friend: true,
+  origin: "Indie",
+  province: "Alberta",
+  address: "Edmonton",
+  latitude: 5.1,
+  longitude: 555.0
+)
+
+
+User.create!(
+  email: "etienne@hotmail.com",
+  password: 123456,
+  username: "Etienne",
+  friend: true,
+  origin: "Usa",
+  province: "Toronto",
+  address: "Down town",
+  latitude: 5.1,
+  longitude: 555.0
+)
+
+User.create!(
+  email: "gaitan@hotmail.com",
+  password: 123456,
+  username: "Gaetan",
+  friend: true,
+  origin: "Manitoba",
+  province: "Winnipeg",
+  address: "Grant park",
+  latitude: 5.1,
+  longitude: 555.0
 )
 
 puts "done"
