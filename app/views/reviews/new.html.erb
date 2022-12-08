@@ -1,5 +1,5 @@
-<h1>New review</h1>
-<%= simple_form_for [@user, @review] do |f| %>
+<h1> New review</h1>
+<%= simple_form_for([@friend, @review], url: review_path(@friend.id)) do |f| %>
   <%= f.input :commentary %>
   <%= f.input :rating %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>

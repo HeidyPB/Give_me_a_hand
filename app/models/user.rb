@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :languages, through: :users_languages
   has_many :categories, through: :users_categories
   has_many :meetings
+  has_many :reviews
+  has_many :reviews_as_friend, class_name: 'Review', foreign_key: :friend_id
 
   validates_length_of :password, in: 6..20, on: :create
 end

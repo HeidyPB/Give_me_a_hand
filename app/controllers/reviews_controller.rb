@@ -1,20 +1,24 @@
 class ReviewsController < ApplicationController
   # before_action :set_friend, only: %i[new create]
+  # def show
+  #   # @review = Review.find_by_id(params[:id])
+  # end
 
   def new
-    # @friend = Friend.find_by_id(params[:friend_id])
     @review = Review.new
-  end
-
-  def show
-    @review = Review.find_by_id(params[:id])
+    @friend = User.find(params[:id])
   end
 
   def create
     @review = Review.new(review_params)
     @review.user = current_user
-    @review.save
-    redirect_to friend_path(@friend)
+    @friend = User.find(params[:id])
+    @review.friend = @friend
+    if @review.save
+      redirect_to friend_path(@friend), notice: "thanks for your review"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
