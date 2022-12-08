@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Cleaning DB..."
+Meeting.destroy_all
+User.destroy_all
+
+puts "Creating users.."
+
 User.create!(
   email:"pao@hotmail.com",
   password:123456,
@@ -28,3 +34,5 @@ User.create!(
   latitude: 1.1,
   longitude: 222.0
 )
+
+puts "done"

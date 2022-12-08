@@ -24,6 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_183439) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_reviews_on_friend_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "meetings", force: :cascade do |t|
@@ -36,17 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_183439) do
     t.datetime "updated_at", null: false
     t.index ["friend_id"], name: "index_meetings_on_friend_id"
     t.index ["user_id"], name: "index_meetings_on_user_id"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.text "commentary"
-    t.integer "rating"
-    t.bigint "user_id", null: false
-    t.bigint "friend_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["friend_id"], name: "index_reviews_on_friend_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "user_categories", force: :cascade do |t|
