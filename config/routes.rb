@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  get 'friends', to: 'pages#friends'
-
+  get 'friends', to: 'friends#index'
+  get "friends/:id", to: "friends#show"
 
   resources :friends, only: [:show] do
     resources :meetings, only: %i[new create]
