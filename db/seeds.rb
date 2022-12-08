@@ -109,9 +109,9 @@ User.create!(
 )
 
 User.create!(
-  email: "sebastian@hotmail.com",
+  email: "gaitan@hotmail.com",
   password: 123456,
-  username: "Sebastian",
+  username: "Gaetan",
   friend: true,
   origin: "Manitoba",
   province: "Winnipeg",
