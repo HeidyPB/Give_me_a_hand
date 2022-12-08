@@ -1,0 +1,15 @@
+<br>
+<br>
+<br>
+<div id="simple-form">
+  <%= simple_form_for(@friend) do |f| %>
+  <%= f.input :username , input_html: { class:"text-dark"}%>
+  <%= f.input :origin %>
+  <%= f.input :province %>
+  <%= f.input :address %>
+  <%= f.association :language, :as => :select %>
+  <%= f.association :category, :as => :select %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+  <% end %>
+</div>
