@@ -13,17 +13,18 @@ class FriendsController < ApplicationController
   end
 
   def create
-    @friend = Friend.new(friend_params)
-    @friend.user = current_user
-    authorize @friend
+    @friend = current_user
+    @friend.friend = true # user assigned as friend here!
+    @friend.username = params[:username]
+    @friend.origin = params[:origin]
+    @friend.language = params[:language]
+    @friend.province = params[:province]
+    # authorize @friend
     if @friend.save
       redirect_to friend_path(@friend), notice: 'friend was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def edit
   end
 
   def update
