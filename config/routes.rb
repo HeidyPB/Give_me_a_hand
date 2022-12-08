@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+  # friends routes
   get 'friends', to: 'friends#index'
+  get "friends/new", to: "friends#new"
+  patch "friends", to: "friends#update_user", as: :update_user
+  get "friends/edit", to: "friends#edit", as: :edit
+  patch "friends", to: "friends#update", as: :update
+  # patch "friends/:id", to: "friends#update", as: :update_friend
+
+  # meetings routes
   get 'users/:id/meeting', to: 'meetings#show', as: :meeting
 
   # reviews routes
@@ -9,13 +17,11 @@ Rails.application.routes.draw do
   post 'users/:id/reviews', to: 'reviews#create', as: :review_create
   get 'users/:id/reviews', to: 'reviews#show', as: :review
 
-  # get 'friends/:id'
-
+  # nested routes
   resources :friends, only: [:show] do
-    resources :meetings, only: %i[new create show]
+    resources :meetings, only: %i[new create]
   end
 
-  # resources :meetings, only: [:show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"

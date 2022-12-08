@@ -1,5 +1,8 @@
 <h1><%= @friend.username %></h1>
 <h1><%= @friend.origin %></h1>
+<h1><%= @friend.province %></h1>
+<h1><%= @friend.languages.first %></h1>
+<h1><%= @friend.categories.first %></h1>
 <%= link_to 'New meeting', new_friend_meeting_path(@friend) %>
 <%= link_to 'New review', review_new_path(@friend) %>
 

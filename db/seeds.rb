@@ -7,14 +7,20 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Cleaning DB..."
 Meeting.destroy_all
+UserLanguage.destroy_all
+Language.destroy_all
+UserCategory.destroy_all
 User.destroy_all
+Category.destroy_all
 
 puts "Creating users.."
 
 User.create!(
   email:"heidy@hotmail.com",
   password: 123456,
-  username: "Heidy",
+  username: "Heidy24",
+  firstname: "Heidy",
+  lastname: "Moralez",
   friend: false,
   origin: "Colombienne",
   province: "Cartagena",
@@ -26,7 +32,9 @@ User.create!(
 User.create!(
   email: "estuardo@hotmail.com",
   password: 123456,
-  username: "estuardo",
+  username: "Stuart",
+  firstname: "Estuardo",
+  lastname: "Reyes",
   friend: true,
   origin: "Canadien",
   province: "Quebec",
@@ -38,7 +46,9 @@ User.create!(
 User.create!(
   email:"paula@hotmail.com",
   password: 123456,
-  username: "paula",
+  username: "MissPaula",
+  firstname: "paula",
+  lastname: "benavides",
   friend: true,
   origin: "Colombiene",
   province: "Quebec",
@@ -50,7 +60,9 @@ User.create!(
 User.create!(
   email: "felipe@hotmail.com",
   password: 123456,
-  username: "Felipe",
+  username: "Pipe",
+  firstname: "Felipe",
+  lastname: "Benavides",
   friend: true,
   origin: "Colombien",
   province: "Ontario",
@@ -62,7 +74,9 @@ User.create!(
 User.create!(
   email: "andres@hotmail.com",
   password: 123456,
-  username: "Andres",
+  username: "AndreBoy",
+  firstname: "Andres",
+  lastname: "Sanchez",
   friend: true,
   origin: "Mexicain",
   province: "British Columbia",
@@ -74,7 +88,9 @@ User.create!(
 User.create!(
   email: "sebastian@hotmail.com",
   password: 123456,
-  username: "Sebastien",
+  username: "Seb",
+  firstname: "Sebastien",
+  lastname: "Morin",
   friend: true,
   origin: "France",
   province: "saskatchewan",
@@ -86,7 +102,9 @@ User.create!(
 User.create!(
   email: "Hamza@hotmail.com",
   password: 123456,
-  username: "Hamza",
+  username: "Hami",
+  firstname: "Hamza",
+  lastname: "Ali",
   friend: true,
   origin: "Indie",
   province: "Alberta",
@@ -98,7 +116,9 @@ User.create!(
 User.create!(
   email: "etienne@hotmail.com",
   password: 123456,
-  username: "Etienne",
+  username: "Eti1996",
+  firstname: "Etienne",
+  lastname: "Bolduc",
   friend: true,
   origin: "Usa",
   province: "Toronto",
@@ -110,7 +130,9 @@ User.create!(
 User.create!(
   email: "gaitan@hotmail.com",
   password: 123456,
-  username: "Gaetan",
+  username: "Gaetan1960",
+  firstname: "Gaetan",
+  lastname: "Vaillancourt",
   friend: true,
   origin: "Manitoba",
   province: "Winnipeg",
@@ -118,5 +140,15 @@ User.create!(
   latitude: 5.1,
   longitude: 555.0
 )
+
+languages = ["French", "English", "Spanish", "Mandarin", "Italian"]
+languages.each do |language|
+  Language.create!(name: language)
+end
+
+categories = ["Finance", "Real Estate", "Education", "Coding", "Employment"]
+categories.each do |category|
+  Category.create!(name: category)
+end
 
 puts "done"
