@@ -1,12 +1,10 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :home
-
-  def home
+class FriendsController < ApplicationController
+  def index
+    @friends = User.where(friend: true)
   end
 
-<<<<<<< HEAD
-  def friends
-    @friends = User.where(friend: true)
+  def show
+    @friend = User.find(params[:id])
   end
 
   def new
@@ -15,9 +13,9 @@ class PagesController < ApplicationController
   end
 
   def create
-    @friend = User.new(friend_params)
+    @friend = Friend.new(friend_params)
     @friend.user = current_user
-    # authorize @friend
+    authorize @friend
     if @friend.save
       redirect_to friend_path(@friend), notice: 'friend was successfully created.'
     else
@@ -44,16 +42,12 @@ class PagesController < ApplicationController
   private
 
   def set_friend
-    @friend = User.find(params[:id])
+    @friend = Friend.find(params[:id])
     authorize @friend
   end
 
   def friend_params
     params.require(:friend).permit(:username, :origin, :province, :address, :language, :category, :photo)
   end
-=======
-  # def friends
-  #   @friends = User.where(friend: true)
-  # end
->>>>>>> b036d1f99a5c0d2c3a42bc7ee88b18965f48df1e
+
 end

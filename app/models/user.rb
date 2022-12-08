@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :users_categories
   has_many :languages, through: :users_languages
   has_many :categories, through: :users_categories
+  has_many :meetings
 
   validates_length_of :password, in: 6..20, on: :create
 end

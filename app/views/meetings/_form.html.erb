@@ -1,5 +1,5 @@
 <div id="simple-form">
-  <%= simple_form_for(@meeting) do |f| %>
+  <%= simple_form_for([@friend, @meeting], url: friend_meetings_path(@friend.id)) do |f| %>
   <%= f.input :title , input_html: { class:"text-dark"}%>
   <%= f.input :description %>
   <%= f.input :date %>
