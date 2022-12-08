@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
-  # before_action :set_restaurant, only: %i[new create]
+  # before_action :set_friend, only: %i[new create]
 
   def new
-    @user = User.find_by_id(params[:user_id])
+    # @friend = Friend.find_by_id(params[:friend_id])
     @review = Review.new
   end
 
@@ -12,16 +12,20 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.user = @user
-    @review.save!
-    redirect_to review_path(@review)
+    @review.user = current_user
+    @review.save
+    redirect_to friend_path(@friend)
   end
 
   private
 
-  # def set_user
-  #   @user = User.find(params[:user_id])
+  # def set_friend
+  #   @friend = friend.find(params[:friend_id])
   # end
+
+  def friends
+    @friends = User.where(friend: true)
+  end
 
   def review_params
     params.require(:review).permit(:commentary, :rating)

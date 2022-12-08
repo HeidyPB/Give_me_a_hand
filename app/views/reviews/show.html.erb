@@ -1,7 +1,8 @@
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
-  <% @user.reviews.each do |review| %>
+  <% @friends.reviews.each do |review| %>
     <li class="list-group-item"><%= review.commentary %></li>
+    <li class="list-group-item"><%= review.rating %></li>
   <% end %>
 </ul>
 <br>
