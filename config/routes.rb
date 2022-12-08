@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'friends', to: 'friends#index'
   get "friends/new", to: "friends#new"
   patch "friends", to: "friends#update_user", as: :update_user
-  # get "friends/edit", to: "friends#edit", as: :edit_friend
+  get "friends/edit", to: "friends#edit", as: :edit
+  patch "friends", to: "friends#update", as: :update
   # patch "friends/:id", to: "friends#update", as: :update_friend
 
   # meetings routes

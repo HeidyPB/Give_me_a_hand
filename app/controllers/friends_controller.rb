@@ -7,10 +7,10 @@ class FriendsController < ApplicationController
     @friend = User.find(params[:id])
   end
 
-  def new
-    @friend = User.new
-    # authorize @friend
-  end
+  # def new
+  #   @friend = User.new
+  #   # authorize @friend
+  # end
 
   # used to create new friend profile
   def update_user
@@ -23,17 +23,18 @@ class FriendsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @friend = current_user
-  #   # raise
-  # end
+  # Edit user's profile page
+  def edit
+    @friend = current_user
+  end
 
-  # def update
-  #   if current_user.update(user_params)
-  #     redirect_to friend_path(current_user), notice: 'friend was successfully created.'
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
+  def update
+    if current_user.update(user_params)
+      redirect_to friend_path(current_user), notice: 'friend was successfully updated.'
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
     # @friend = current_user
     # @friend.friend = true # user assigned as friend here!
