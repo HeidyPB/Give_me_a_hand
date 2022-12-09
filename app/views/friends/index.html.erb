@@ -1,7 +1,14 @@
 <h1>all friends</h1>
-
+<br>
+<h4><%= link_to "Become a Friend today!", friends_new_path %></h4>
+<br>
 <ul>
   <% @friends.each do |friend| %>
     <li><%= friend.username %></li>
+    <li><%= friend.origin %></li>
+    <li><%= friend.province %></li>
+    <%= link_to "See my profile", friend_path(friend) %>
+    <br>
+    <br>
   <% end %>
 </ul>

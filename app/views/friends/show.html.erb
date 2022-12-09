@@ -1,6 +1,9 @@
 <h1><%= @friend.username %></h1>
+<h1><%= @friend.firstname %></h1>
+<h1><%= @friend.lastname %></h1>
 <h1><%= @friend.origin %></h1>
 <h1><%= @friend.province %></h1>
+<h1><%= @friend.address %></h1>
 <h1><%= @friend.languages.first %></h1>
 <h1><%= @friend.categories.first %></h1>
 <%= link_to 'New meeting', new_friend_meeting_path(@friend) %>
