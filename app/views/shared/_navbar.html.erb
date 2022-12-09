@@ -17,10 +17,10 @@
           <li class="nav-item">
             <%= link_to "Find a Friend", friends_path, class: "nav-link" %>
           </li>
-
           <li class="nav-item">
-            <%= link_to "My Profile", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Meetings", meeting_path(@user), class: "nav-link" %>
           </li>
+
           <li class="nav-item dropdown">
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
