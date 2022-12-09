@@ -1,27 +1,35 @@
+<div class="container">
+  <div class="card-friend">
+    <img src="https://avatars.githubusercontent.com/u/39506332?v=4" />
+    <div class="card-friend-infos">
+      <h1>Friend <%= @friend.username %></h1>
+      <h3><%= @friend.firstname %></h3>
+      <h3><%= @friend.lastname %></h3>
+      <h3><%= @friend.origin %></h3>
+      <h3><%= @friend.province %></h3>
+      <h3><%= @friend.address %></h3>
+      <h3><%= @friend.languages.first %></h3>
+      <h3><%= @friend.categories.first %></h3>
+      <p>I can help you with <strong>open bank accounts</strong>.</p>
+    </div>
+  </div>
 
-<div class="card-friend">
-  <img src="data:image/jpeg;base64,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" />
-  <div class="card-friend-infos">
-    <h3>Friend <%= @friend.username %></h3>
-    <h3><%= @friend.firstname %></h3>
-    <h3><%= @friend.lastname %></h3>
-    <h3><%= @friend.origin %></h3>
-    <h3><%= @friend.province %></h3>
-    <h3><%= @friend.address %></h3>
-    <h3><%= @friend.languages.first %></h3>
-    <h3><%= @friend.categories.first %></h3>
-    <p>I can help you with <strong>open bank accounts</strong>.</p>
+  <%= link_to 'New meeting', new_friend_meeting_path(@friend) %>
+  <%= link_to 'New review', review_new_path(@friend) %>
+
+  <h2><strong>What friends say about Stuard</strong></h2>
+<div class="row">
+  <div class="col-lg-3">
+    <ul class="list-group">
+      <% @friend.reviews_as_friend.each do |review| %>
+        <br>
+        <li class="list-group-item"><%= 'avatar' %></li>
+        <li class="list-group-item"><%= review.commentary %></li>
+        <li class="list-group-item"><%= '⭐' * review.rating %></li>
+        <li class="list-group-item"><%= 'username' %></li>
+      <% end %>
+    </ul>
   </div>
 </div>
 
-<%= link_to 'New meeting', new_friend_meeting_path(@friend) %>
-<%= link_to 'New review', review_new_path(@friend) %>
-
-<p><strong>Reviews</strong></p>
-<ul class="list-group">
-  <% @friend.reviews_as_friend.each do |review| %>
-    <li class="list-group-item"><%= review.commentary %></li>
-    <li class="list-group-item"><%= review.rating %></li>
-  <% end %>
-</ul>
-<br>
+</div>
