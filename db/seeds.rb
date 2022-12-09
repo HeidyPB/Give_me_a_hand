@@ -7,8 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Cleaning DB..."
 Meeting.destroy_all
-UserLanguage.destroy_all
-Language.destroy_all
+Review.destroy_all
+UserSpokenLanguage.destroy_all
+SpokenLanguage.destroy_all
 UserCategory.destroy_all
 User.destroy_all
 Category.destroy_all
@@ -141,10 +142,10 @@ User.create!(
   longitude: 555.0
 )
 
-# languages = ["French", "English", "Spanish", "Mandarin", "Italian"]
-# languages.each do |language|
-#   Language.create!(name: language)
-# end
+languages = ["French", "English", "Spanish", "Mandarin", "Italian"]
+languages.each do |language|
+  SpokenLanguage.create!(name: language)
+end
 
 categories = ["Finance", "Real Estate", "Education", "Coding", "Employment"]
 categories.each do |category|

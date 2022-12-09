@@ -1,7 +1,18 @@
 <h1>all friends</h1>
+<br>
+<h4><%= link_to "Become a Friend today!", friends_new_path %></h4>
+<br>
 
-<ul>
+<div class = "cards">
   <% @friends.each do |friend| %>
-    <li><%= friend.username %></li>
+    <div class="card-product">
+      <img src="https://res.cloudinary.com/dwvrcwjwc/image/upload/v1670613261/Miscellaneous/profile_logo_os91ty.png" />
+      <div class="card-product-infos">
+        <li><%= friend.username %></li>
+        <li><%= friend.origin %></li>
+        <li><%= friend.province %></li>
+        <%= link_to "See my profile", friend_path(friend) %>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
