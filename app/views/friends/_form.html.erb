@@ -1,9 +1,13 @@
 <div id="simple-form">
   <%= simple_form_for(current_user, url: :update_user) do |f| %>
   <%= f.input :username , input_html: { class:"text-dark"}%>
+  <!--
+  <%= f.input :firstname %>
+  <%= f.input :lastname %>
+  -->
   <%= f.input :origin %>
   <%= f.input :province %>
-  <%# <%= f.association :languages, as: :select %>
+  <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
   <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>

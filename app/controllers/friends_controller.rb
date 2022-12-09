@@ -20,13 +20,21 @@ class FriendsController < ApplicationController
       current_user.update!(user_params)
       # authorize current_user
       @categories = Category.where(id: params[:user][:category_ids])
-      # raise
       @categories.each do |category|
         UserCategory.create!(
           category: category,
           user: current_user
         )
       end
+
+      @spoken_languages = SpokenLanguage.where(id: params[:user][:spoken_language_ids])
+      @spoken_languages.each do |spoken_language|
+        UserSpokenLanguage.create!(
+          spoken_language: spoken_language,
+          user: current_user
+        )
+      end
+
       redirect_to friend_path(current_user), notice: 'friend was successfully created.'
     end
   rescue ActiveRecord::RecordInvalid
