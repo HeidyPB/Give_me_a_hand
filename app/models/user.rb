@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :user_languages
-  has_many :languages, through: :user_languages
+  has_many :user_spoken_languages
+  has_many :spoken_languages, through: :user_spoken_languages
   has_many :user_categories
   has_many :categories, through: :user_categories
   has_many :meetings
