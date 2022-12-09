@@ -1,0 +1,27 @@
+.card-friend {
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+.card-friend img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+.card-friend h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.card-friend p {
+  font-size: 20px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.card-friend .card-friend-infos {
+  padding: 16px;
+}
