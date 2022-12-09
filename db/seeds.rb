@@ -124,10 +124,10 @@ User.create!(
   longitude: 555.0
 )
 
-languages = ["French", "English", "Spanish", "Mandarin", "Italian"]
-languages.each do |language|
-  Language.create!(name: language)
-end
+# languages = ["French", "English", "Spanish", "Mandarin", "Italian"]
+# languages.each do |language|
+#   Language.create!(name: language)
+# end
 
 categories = ["Finance", "Real Estate", "Education", "Coding", "Employment"]
 categories.each do |category|
