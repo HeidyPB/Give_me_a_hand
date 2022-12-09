@@ -1,0 +1,11 @@
+<div class="col-6">
+  <h2>My meetings</h2>
+    <% @user_meetings.each do |meeting| %>
+      <div class="boite">
+        <p> Title: <%= meeting.title %><p>
+        <p>Description: <%= meeting.description %></p>
+        <p>Date: <%= meeting.date %></p>
+      </div>
+      <br>
+    <% end %>
+</div>
