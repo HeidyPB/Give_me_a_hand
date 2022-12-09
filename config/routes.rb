@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   # patch "friends/:id", to: "friends#update", as: :update_friend
 
   # meetings routes
-  get 'users/:id/meeting', to: 'meetings#show', as: :meeting
+
+  get 'users/:id/meetings', to: 'meetings#user_meetings', as: :user_meetings
 
   # reviews routes
   get 'users/:id/reviews/new', to: 'reviews#new', as: :review_new
