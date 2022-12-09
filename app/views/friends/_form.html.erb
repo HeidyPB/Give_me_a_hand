@@ -3,8 +3,8 @@
   <%= f.input :username , input_html: { class:"text-dark"}%>
   <%= f.input :origin %>
   <%= f.input :province %>
-  <%# <%= f.association :languages, as: :select %> %>
-  <%= f.association :categories, as: :select %>
+  <%# <%= f.association :languages, as: :select %>
+  <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
   <% end %>

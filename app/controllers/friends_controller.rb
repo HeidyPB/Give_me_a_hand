@@ -8,20 +8,29 @@ class FriendsController < ApplicationController
     @reviews = @friend.reviews
   end
 
-  # def new
-  #   @friend = User.new
-  #   # authorize @friend
-  # end
+  def new
+    # @friend = User.new
+    # authorize @friend
+  end
 
   # used to create new friend profile
   def update_user
-    current_user.friend = true # user assigned as friend here
-    # authorize current_user
-    if current_user.update(user_params)
+    ActiveRecord::Base.transaction do
+      current_user.friend = true # user assigned as friend here
+      current_user.update!(user_params)
+      # authorize current_user
+      @categories = Category.where(id: params[:user][:category_ids])
+      # raise
+      @categories.each do |category|
+        UserCategory.create!(
+          category: category,
+          user: current_user
+        )
+      end
       redirect_to friend_path(current_user), notice: 'friend was successfully created.'
-    else
-      render :new, status: :unprocessable_entity
     end
+  rescue ActiveRecord::RecordInvalid
+    render :new, status: :unprocessable_entity, notice: 'Something went wrong!'
   end
 
   # Edit user's profile page
@@ -56,5 +65,4 @@ class FriendsController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :origin, :province, :category, :address)
   end
-
 end
