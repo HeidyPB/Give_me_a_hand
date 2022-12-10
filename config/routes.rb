@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+
   # friends routes
   get 'friends', to: 'friends#index'
   get "friends/new", to: "friends#new"
   patch "friends", to: "friends#update_user", as: :update_user
   get "friends/edit", to: "friends#edit", as: :edit
   patch "friends", to: "friends#update", as: :update
-  # patch "friends/:id", to: "friends#update", as: :update_friend
+
 
   # meetings routes
-
   get 'users/:id/meetings', to: 'meetings#user_meetings', as: :user_meetings
 
   # reviews routes
@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   # nested routes
   resources :friends, only: [:show] do
     resources :meetings, only: %i[new create]
+  end
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
