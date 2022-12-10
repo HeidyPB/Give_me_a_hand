@@ -6,7 +6,11 @@
 <div class = "cards">
   <% @friends.each do |friend| %>
     <div class="card-product">
-      <img src="https://res.cloudinary.com/dwvrcwjwc/image/upload/v1670613261/Miscellaneous/profile_logo_os91ty.png" />
+      <% if friend.photo.attached? %>
+        <%= cl_image_tag friend.photo.key, crop: :fill %>
+      <%else%>
+        <%= image_tag('givemeahand.jpg')%>
+      <%end%>
       <div class="card-product-infos">
         <li><%= friend.username %></li>
         <li><%= friend.origin %></li>

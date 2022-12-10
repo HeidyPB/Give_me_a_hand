@@ -1,7 +1,10 @@
 <div class="container">
   <div class="card-friend">
-    <img src="https://avatars.githubusercontent.com/u/39506332?v=4" />
-    <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
+    <% if @friend.photo.attached? %>
+        <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
+    <%else%>
+    <%= image_tag('givemeahand.jpg')%>
+    <%end%>
     <div class="card-friend-infos">
       <h1>Friend <%= @friend.username %></h1>
       <h3><%= @friend.firstname %></h3>
