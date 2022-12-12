@@ -1,0 +1,65 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 130px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.container {
+  border-color: #2196f3;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.card-meeting {
+  width: 550px;
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  border-color: #2196f3;
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.card-meeting:hover {
+  outline: 2px solid;
+  outline-color: #2196f3;
+  border-radius: 10px;
+}
+
+.card-meeting img {
+  height: 90%;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.card-meeting .card-meeting-infos {
+  padding: 16px;
+}
+
+.card-meeting h6 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-meeting p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}

@@ -4,7 +4,6 @@ class MeetingsController < ApplicationController
   def new
     @meeting = Meeting.new
     @friend = User.find(params[:friend_id])
-    # authorize @meeting
   end
 
   def create
@@ -12,7 +11,6 @@ class MeetingsController < ApplicationController
     @meeting.user = current_user
     @friend = User.find(params[:friend_id])
     @meeting.friend = @friend
-    # authorize @meeting
     if @meeting.save
       redirect_to user_meetings_path(current_user), notice: "Your meeting was successfully."
     else
@@ -27,7 +25,7 @@ class MeetingsController < ApplicationController
   private
 
   def set_friend
-    @friend = Friend.find(params[:id])
+    @friend = User.find(params[:friend_id])
   end
 
   def meeting_params
