@@ -11,6 +11,8 @@ Review.destroy_all
 UserSpokenLanguage.destroy_all
 SpokenLanguage.destroy_all
 UserCategory.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 Category.destroy_all
 
