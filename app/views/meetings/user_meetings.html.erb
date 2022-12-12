@@ -19,3 +19,8 @@
     </div>
   <% end %>
 </div>
+
+<div data-controller="videoroom">
+  <button data-action="click->videoroom#joinVideoroom" id="dailyTrigger">Join</button>
+  <div id="video-container" data-videoroom-target="videoContainer"></div>
+</div>
