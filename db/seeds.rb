@@ -54,15 +54,73 @@ users = [
       username: "Heidy24",
       firstname: "Heidy",
       lastname: "Moralez",
-      friend: true,
-      origin: "Colombienne",
-      province: "Cartagena",
+      friend: false,
+      origin: "colombia",
+      country: "colombia",
+      province: "cartagena",
       address: "Chateau De Saint Felipe",
       latitude: 1.1,
       longitude: 111.0
     },
     languages: ["spanish", "english", "french"],
     categories: ["education"]
+  },
+
+  {
+    properties: {
+      email: "estuardo@hotmail.com",
+      password: '123456',
+      username: "Stuart",
+      firstname: "Estuardo",
+      lastname: "Reyes",
+      friend: true,
+      origin: "Canada",
+      country: "Canada",
+      province: "quebec",
+      address: "montegerie",
+      latitude: 1.1,
+      longitude: 222.0
+    },
+    languages: ["spanish", "english", "french"],
+    categories: ["education", "coding"]
+  },
+
+  {
+    properties: {
+      email:"paula@hotmail.com",
+      password: "123456",
+      username: "MissPaula",
+      firstname: "paula",
+      lastname: "benavides",
+      friend: true,
+      origin: "venezuela",
+      country: "venezuela",
+      province: "quebec",
+      address: "ile de soeurs",
+      latitude: 1.1,
+      longitude: 111.0
+    },
+    languages: ["spanish"],
+    categories: ["education", "coding"]
+  },
+
+  {
+    properties: {
+      email: "felipe@hotmail.com",
+      password: "123456",
+      username: "Pipe",
+      firstname: "Felipe",
+      lastname: "Benavides",
+      friend: true,
+      origin: "france",
+      country: "france",
+      province: "ontario",
+      address: "niagara",
+      latitude: 3.1,
+      longitude: 333.0
+    },
+    languages: ["french"],
+    categories: ["education", "coding"]
   }
 ]
 
