@@ -3,7 +3,7 @@
     <% if @friend.photo.attached? %>
         <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
     <%else%>
-    <%= image_tag('givemeahand.jpg')%>
+      <%= image_tag('givemeahand.jpg')%>
     <%end%>
     <div class="card-friend-infos">
       <h1>Friend <%= @friend.username %></h1>

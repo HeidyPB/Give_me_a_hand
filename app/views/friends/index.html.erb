@@ -3,20 +3,46 @@
 <h4><%= link_to "Become a Friend today!", friends_new_path %></h4>
 <br>
 
-<div class = "cards">
-  <% @friends.each do |friend| %>
-    <div class="card-product">
-      <% if friend.photo.attached? %>
-        <%= cl_image_tag friend.photo.key, crop: :fill %>
-      <%else%>
-        <%= image_tag('givemeahand.jpg')%>
-      <%end%>
-      <div class="card-product-infos">
-        <li><%= friend.username %></li>
-        <li><%= friend.origin %></li>
-        <li><%= friend.province %></li>
-        <%= link_to "See my profile", friend_path(friend) %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<div class="container" >
+  <div class="intro">
+    <h1>Find a friend to help you settle in your new country</h1>
+    <p>There’s a lot to consider when moving overseas. Need of health insurance?
+      What identity documents will you need to apply for? Where will you live and
+      work? We’ve been there, and we get it! That’s why we’ve got friends that can
+      provide you with an answer to your questions and accompany you along the
+      hard process of moving abroad.
+    </p>
+    <h3> IMPLEMENT_COUNTING are available to give you a hand!</h3>
+  </div>
+
+  <div class = "cards">
+
+    <% @friends.each do |friend| %>
+      <div class="card-product">
+        <% if friend.photo.attached? %>
+          <%= cl_image_tag friend.photo.key, crop: :fill %>
+        <%else%>
+          <%= image_tag('givemeahand.jpg')%>
+        <%end%>
+        <div class="card-product-infos">
+          <div><h2><%= friend.username %></h2></div>
+          <!-- Ratings -->
+          <div id="stars">
+            <% friend.reviews_as_friend.each do |review| %>
+              <%= '⭐' * review.rating %>
+            <% end %>
+          </div>
+          <!-- Spoken Languages -->
+          <div>
+            <% friend.spoken_languages.each do |l| %>
+              <span class="spoken-language"><%= l.name %></span>
+            <% end %>
+          </div>
+          <!-- Link to Profile -->
+          <%= link_to "visit profile", friend_path(friend), class: "btn btn-flat"  %>
+        </div>
+      </div> <!-- End card-product -->
+    <% end %> <!-- End @friends[] -->
+
+  </div> <!-- End Cards -->
+</div> <!-- End Container -->
