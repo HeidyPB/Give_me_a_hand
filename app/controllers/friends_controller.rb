@@ -1,7 +1,6 @@
 class FriendsController < ApplicationController
   def index
     @friends = User.where(friend: true)
-    # raise
   end
 
   def show
@@ -10,8 +9,6 @@ class FriendsController < ApplicationController
   end
 
   def new
-    # @friend = User.new
-    # authorize @friend
   end
 
   # used to create new friend profile
@@ -54,20 +51,6 @@ class FriendsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-    # @friend = current_user
-    # @friend.friend = true # user assigned as friend here!
-    # @friend.username = params[:username]
-    # @friend.origin = params[:origin]
-    # @friend.language = params[:language]
-    # @friend.province = params[:province]
-    # # authorize @friend
-    # if @friend.save
-    #   redirect_to friend_path(@friend), notice: 'friend was successfully created.'
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
-  # end
 
   private
 
