@@ -35,7 +35,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: bold;
     color: #2196f3;
     margin: 20;
@@ -46,7 +46,7 @@ body {
   #card .details > p {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
 
   }
@@ -86,11 +86,11 @@ body {
 
   .imagehands {
     display: inline-block;
-    height: 350px;
-    width: 400px;
+    height: 400px;
+    width: 450px;
     object-fit: contain;
     object-position: center;
-    box-shadow: 35px 35px 0px 0px #2196f3;
+    box-shadow: 50px 50px 0px 0px #2196f3;
   }
 
 
