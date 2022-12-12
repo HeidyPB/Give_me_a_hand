@@ -1,8 +1,15 @@
-<div id="simple-form">
+<div>
   <%= simple_form_for([@friend, @meeting], url: friend_meetings_path(@friend.id)) do |f| %>
-  <%= f.input :title , input_html: { class:"text-dark"}%>
-  <%= f.input :description %>
-  <%= f.input :date %>
-  <%= f.submit %>
+        <%= f.input :title , input_html: { class:"text-dark"}%>
+        <%= f.input :description %>
+    <div class="row">
+      <div class="col">
+        <%= f.input :date, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
+      </div>
+    </div>
+        <%= f.submit %>
   <% end %>
 </div>

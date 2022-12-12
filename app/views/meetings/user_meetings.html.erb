@@ -1,11 +1,21 @@
-<div class="col-6">
-  <h2>My meetings</h2>
-    <% @user_meetings.each do |meeting| %>
-      <div class="boite">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dc7s25hrw/image/upload/v1670700724/give%20me%20a%20hand/meeting_lfysx5.jpg) ;">
+  <div class="containerb">
+    <h1><strong>My meetings</strong></h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <% @user_meetings.each do |meeting| %>
+    <div class="card-meeting" class="col-6">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"/>
+      <div class="card-meeting-infos">
+        <h6> You have a meeting with <%= meeting.friend.firstname %> <%= meeting.friend.lastname %><h6>
         <p> Title: <%= meeting.title %><p>
+        <p><i class="fa-solid fa-calendar-days"></i> : <%= meeting.date %></p>
         <p>Description: <%= meeting.description %></p>
-        <p>Date: <%= meeting.date %></p>
+        <p><i class="fa-solid fa-video"></i> Go to the videoroom</p>
       </div>
-      <br>
-    <% end %>
+    </div>
+  <% end %>
 </div>
