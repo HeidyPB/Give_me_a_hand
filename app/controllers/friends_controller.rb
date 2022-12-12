@@ -1,6 +1,7 @@
 class FriendsController < ApplicationController
   def index
     @friends = User.where(friend: true)
+    # raise
   end
 
   def show
@@ -71,6 +72,6 @@ class FriendsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :origin, :province, :category, :address)
+    params.require(:user).permit(:username, :origin, :province, :category, :address, :photo)
   end
 end
