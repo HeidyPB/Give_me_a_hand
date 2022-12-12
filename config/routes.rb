@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   patch "friends", to: "friends#update_user", as: :update_user
   get "friends/edit", to: "friends#edit", as: :edit
   patch "friends", to: "friends#update", as: :update
-
+  get 'friends/videoroom', to: 'friends#videoroom', as: :videoroom
 
   # meetings routes
   get 'users/:id/meetings', to: 'meetings#user_meetings', as: :user_meetings
