@@ -1,3 +1,9 @@
+// container
+.container {
+  padding-bottom: 40px;
+}
+
+// cards from Lewagon UI kit
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,6 +17,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 
 .card-product img {
@@ -35,4 +42,23 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+// ratings (stars)
+#stars {
+  margin-bottom: 10 px;
+}
+
+// Spoken languages
+.spoken-language {
+  border-style: solid;
+  border-color: #2196f3;
+  border-radius: 12px;
+  border-width: 2px;
+  padding: 3px 10px;
+}
+
+// miscellaneous
+.intro {
+  text-align: center;
 }
