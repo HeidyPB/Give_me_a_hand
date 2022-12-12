@@ -1,15 +1,27 @@
-<div id="simple-form">
-  <%= simple_form_for(current_user, url: :update_user) do |f| %>
-  <%= f.input :username , input_html: { class:"text-dark"}%>
-  <!--
-  <%= f.input :firstname %>
-  <%= f.input :lastname %>
-  -->
-  <%= f.input :origin %>
-  <%= f.input :province %>
-  <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
-  <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
-  <%= f.input :photo, as: :file %>
+<div class="container" id="simple-form">
+  <div class="d-flex justify-content-center">
+    <div class="p-2">
+      <div class="col-sm-12">
+        <%= simple_form_for(current_user, url: :update_user) do |f| %>
+        <%= f.input :username , input_html: { class:"text-dark"}%>
+        <!--
+        <%= f.input :firstname %>
+        <%= f.input :lastname %>
+        -->
+        <%= f.input :origin %>
+        <%= f.input :province %>
+
+        <%= f.input :photo, as: :file %>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="col-sm-12">
+        <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
+        <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
+      </div>
+    </div>
+
+  </div>
   <%= f.submit %>
   <% end %>
 </div>
