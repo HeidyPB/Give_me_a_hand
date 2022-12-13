@@ -57,20 +57,12 @@ body {
 
   }
   .btn {
-
-    transform: translateY(0px);
-    transition: 0.3s linear;
-    background:  #809fff;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    color: #eee;
-    padding: 10;
-    margin: 10;
-
+    color: white;
+    padding: 6px 22px;
+    border-radius: 4px;
+    background: #2196f3;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
   }
 
   .btn:hover{transform: translateY(-6px);
@@ -86,11 +78,11 @@ body {
 
   .imagehands {
     display: inline-block;
-    height: 350px;
-    width: 400px;
+    height: 380px;
+    width: 480px;
     object-fit: contain;
     object-position: center;
-    box-shadow: 35px 35px 0px 0px #2196f3;
+    box-shadow: 50px 50px 0px 0px #2196f3;
   }
 
 
