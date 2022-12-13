@@ -1,6 +1,12 @@
-<h1> New review</h1>
-<%= simple_form_for([@friend, @review], url: review_path(@friend.id)) do |f| %>
-  <%= f.input :commentary %>
-  <%= f.input :rating %>
-  <%= f.submit "Submit review", class: "btn btn_custom_dark" %>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dc7s25hrw/image/upload/v1670700724/give%20me%20a%20hand/meeting_lfysx5.jpg) ;">
+  <div class="containerb">
+    <h1><strong>New reviews</strong></h1>
+  </div>
+</div>
+<div id= container_review>
+  <%= simple_form_for([@friend, @review], url: review_path(@friend.id)) do |f| %>
+    <%= f.input :commentary %>
+    <%= f.input :rating %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+</div>

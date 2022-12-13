@@ -50,4 +50,17 @@
   </div>
 </div>
 
+  <ul class="list-group">
+    <% @friend.reviews_as_friend.each do |review| %>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="card-trip-heidy" alt="...">
+          <li class="list-group-item"><%= review.commentary %></li>
+          <li class="list-group-item"><%= '⭐' * review.rating %></li>
+          <li class="list-group-item"><%= current_user.username %></li>
+        </div>
+      </div>
+    <% end %>
+  </ul>
 </div>
