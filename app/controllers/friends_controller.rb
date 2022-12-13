@@ -1,7 +1,26 @@
 class FriendsController < ApplicationController
   def index
+    @countries = User.where(friend: true).distinct.pluck(:country)
+    @origins = User.where(friend: true).distinct.pluck(:origin)
+    @spoken_languages = SpokenLanguage.pluck(:name)
+    @categories = Category.pluck(:name)
     @friends = User.where(friend: true)
-    # raise
+
+    if params[:country].present?
+      @friends = @friends.where(country: params[:country])
+    end
+
+    if params[:origin].present?
+      @friends = @friends.where(origin: params[:origin])
+    end
+
+    if params[:spoken_language].present?
+      @friends = @friends.joins(user_spoken_languages: :spoken_language).where(spoken_language: { name: params[:spoken_language] })
+    end
+
+    if params[:category].present?
+      @friends = @friends.joins(user_categories: :category).where(category: { name: params[:category] })
+    end
   end
 
   def show
