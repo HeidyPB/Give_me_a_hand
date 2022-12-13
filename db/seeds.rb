@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# Destroy
 puts "Cleaning DB..."
 Meeting.destroy_all
 Review.destroy_all
@@ -16,6 +18,7 @@ Chatroom.destroy_all
 User.destroy_all
 Category.destroy_all
 
+# Spoken languages object creation
 languages = {
   "french" => nil,
   "english" => nil,
@@ -30,6 +33,8 @@ end
 
 puts "Creating languages.."
 
+
+# Categories object creation
 categories = {
   "finance" => nil,
   "real estate" => nil,
@@ -44,6 +49,7 @@ end
 
 puts "Creating categories.."
 
+# Seeding users
 users = [
   {
     properties: {
@@ -54,7 +60,7 @@ users = [
       lastname: "morales",
       friend: false,
       origin: "colombia",
-      country: "colombia",
+      country: "canada",
       province: "cartagena",
       address: "chateau De Saint Felipe",
       about_me: "i need someone to help me in my immigration process",

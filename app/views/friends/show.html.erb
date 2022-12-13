@@ -1,4 +1,4 @@
-<div class="container">
+<div class="containerfriend">
   <div class="card-friend">
     <% if @friend.photo.attached? %>
         <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
@@ -7,23 +7,50 @@
     <%end%>
     <div class="card-friend-infos">
       <h1>Friend <%= @friend.username %></h1>
-      <h3><%= @friend.firstname %></h3>
-      <h3><%= @friend.lastname %></h3>
-      <h3><%= @friend.origin %></h3>
-      <h3><%= @friend.province %></h3>
-      <h3><%= @friend.address %></h3>
-
-      <p>I can help you with <strong>open bank accounts</strong>.</p>
-    </div>
+      <br>
+      <h3><%= @friend.firstname.capitalize %> <%= @friend.lastname.capitalize %></h3>
+      <h3><%= @friend.origin.capitalize %></h3>
+      <br>
+      <h3>📍<%= @friend.province.capitalize %>, <%= @friend.address.capitalize %></h3>
+      <br>
+      <h4>I am a friend that ...<%= @friend.about_me %></h4>
+       <h3></h3>
   </div>
 
-  <%= link_to 'Book a meeting', new_friend_meeting_path(@friend), class: "btn btn-flat" %>
+  <%= render "meetings/meeting_modal" %>
 
-  <%= link_to 'Review', review_new_path(@friend), class: "btn btn-flat" %>
-  <%= link_to 'edit', edit_path, class: "btn btn-flat" %>
+</div>
+<br>
+<div class="friendcategory">
+  <h1>I can help friends with...</h1>
   <br>
-  <h2><strong>What friends say about Stuard</strong></h2>
-  <br>
+  <ul>
+    <% @friend.categories.each do |category| %>
+     <li><strong> <%= category.name.capitalize %></strong></li>
+    <% end %>
+</div>
+<p>It is a pleasure for me to be able to help you! Do not hesitate to count on me and ask me about what you need.  We are here for you, discover the resources we have to welcome you and accompany you on your way to establish yourself in this country.</p>
+<br>
+  <%= link_to 'Book a meeting', new_friend_meeting_path(@friend), class: "btn btn-flat" %>
+  <%= link_to 'New review', review_new_path(@friend) %>
+
+<br>
+<br>
+<br>
+<h2><strong>What friends say about <%= @friend.username.capitalize %></strong></h2>
+<div class="row">
+  <div class="col-lg-3">
+    <ul class="list-group">
+      <% @friend.reviews_as_friend.each do |review| %>
+        <br>
+        <li class="list-group-item"><%= 'avatar' %></li>
+        <li class="list-group-item"><%= review.commentary %></li>
+        <li class="list-group-item"><%= '⭐' * review.rating %></li>
+        <li class="list-group-item"><%= 'username' %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
   <ul class="list-group">
     <% @friend.reviews_as_friend.each do |review| %>

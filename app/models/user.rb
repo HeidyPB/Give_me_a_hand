@@ -14,4 +14,3 @@ class User < ApplicationRecord
 
   validates_length_of :password, in: 6..20, on: :create
 end
-# modificar para manana

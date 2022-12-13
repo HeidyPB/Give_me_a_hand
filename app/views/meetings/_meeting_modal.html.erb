@@ -1,0 +1,15 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn_custom_dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Book a meeting
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= render "meetings/form", friend: @friend, meeting: @meeting %>
+      </div>
+    </div>
+  </div>
+</div>
