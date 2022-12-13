@@ -1,4 +1,5 @@
-<div class="text-center">
-  <h1>Create a meeting</h1>
+<div class="text-center" >
+  <h5 id= title_book>Book a meeting with <%=@friend.firstname %><%=@friend.lastname%></h5>
+  <p>Choose a time slot that suits your schedule</p>
   <%= render "form", meeting: @meeting %>
 </div>

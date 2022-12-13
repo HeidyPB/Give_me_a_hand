@@ -56,33 +56,7 @@ body {
     left: 22.8%;
 
   }
-  .btn {
 
-    transform: translateY(0px);
-    transition: 0.3s linear;
-    background:  #809fff;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    color: #eee;
-    padding: 10;
-    margin: 10;
-
-  }
-
-  .btn:hover{transform: translateY(-6px);
-    background: #1a66ff;}
-
-  .btn span {
-    transition: transform 0.3s;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    margin:0;
-  }
 
   .imagehands {
     display: inline-block;
