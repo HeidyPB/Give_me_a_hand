@@ -16,6 +16,9 @@
       <h4>I am a friend that ...<%= @friend.about_me %></h4>
        <h3></h3>
   </div>
+
+  <%= render "meetings/meeting_modal" %>
+
 </div>
 <br>
 <div class="friendcategory">
@@ -29,7 +32,6 @@
 <p>It is a pleasure for me to be able to help you! Do not hesitate to count on me and ask me about what you need.  We are here for you, discover the resources we have to welcome you and accompany you on your way to establish yourself in this country.</p>
 <br>
   <%= link_to 'Book a meeting', new_friend_meeting_path(@friend), class: "btn btn-flat" %>
-
   <%= link_to 'New review', review_new_path(@friend) %>
 
 <br>

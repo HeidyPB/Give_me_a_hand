@@ -12,7 +12,7 @@
   font-weight: bold;
   text-align: center;
 }
-.container {
+.container_meeting {
   border-color: #2196f3;
   padding: 30px;
   display: grid;
@@ -57,9 +57,21 @@
 }
 
 .card-meeting p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.4;
   opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+#dailyTrigger{
+  color: #2096f3;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 14;
+  line-height: 1.4;
   margin-bottom: 0;
   margin-top: 8px;
 }

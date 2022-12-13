@@ -12,7 +12,7 @@ class MeetingsController < ApplicationController
     @friend = User.find(params[:friend_id])
     @meeting.friend = @friend
     if @meeting.save
-      redirect_to user_meetings_path(current_user), notice: "Your meeting was successfully."
+      redirect_to user_meetings_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end

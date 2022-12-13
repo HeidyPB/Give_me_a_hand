@@ -1,0 +1,28 @@
+.btn_custom_dark {
+  transform: translateY(0px);
+  transition: 0.3s linear;
+  background:  #2096f3;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #eee;
+  padding:5;
+  margin: auto 0;
+}
+
+.btn:hover{
+  transform: translateY(-6px);
+  background-color: #2096f3;
+  color: white;
+  }
+
+.btn span {
+  transition: transform 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin:0;
+}
