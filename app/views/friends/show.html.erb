@@ -17,7 +17,9 @@
     </div>
   </div>
 
-  <%= link_to 'Book a meeting', new_friend_meeting_path(@friend), class: "btn btn_custom_dark" %>
+
+  <%= render "meetings/meeting_modal" %>
+
 
   <%= link_to 'New review', review_new_path(@friend) %>
   <%= link_to 'edit', edit_path %>

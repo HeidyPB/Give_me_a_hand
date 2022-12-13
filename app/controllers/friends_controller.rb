@@ -7,6 +7,7 @@ class FriendsController < ApplicationController
   def show
     @friend = User.find(params[:id])
     @reviews = @friend.reviews
+    @meeting = Meeting.new
   end
 
   def new

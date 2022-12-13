@@ -13,14 +13,12 @@
         <h6> You have a meeting with <%= meeting.friend.firstname %> <%= meeting.friend.lastname %><h6>
         <p> Title: <%= meeting.title %><p>
         <p><i class="fa-solid fa-calendar-days"></i> : <%= meeting.date %></p>
-        <p>Description: <%= meeting.description %></p>
-        <p><i class="fa-solid fa-video"></i> Go to the videoroom</p>
+        <p><strong>Description:</strong><%= meeting.description %></p>
+        <div data-controller="videoroom">
+          <button data-action="click->videoroom#joinVideoroom" id="dailyTrigger"><i class="fa-solid fa-video"></i> Go to the videoroom</button>
+          <div id="video-container" data-videoroom-target="videoContainer"></div>
+        </div>
       </div>
     </div>
   <% end %>
-</div>
-
-<div data-controller="videoroom">
-  <button data-action="click->videoroom#joinVideoroom" id="dailyTrigger">Join</button>
-  <div id="video-container" data-videoroom-target="videoContainer"></div>
 </div>

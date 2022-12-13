@@ -1,5 +1,5 @@
 .container_meeting_new {
-  height: 430px;
+  height: 400px;
   width: 500px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -7,8 +7,13 @@
   padding: 20px;
   margin: 0 auto;
   border-radius: 10px;
+  font-size: 12;
 }
 
 #title_book{
   color: #2096f3;
+}
+
+#form_create_meeting{
+
 }
