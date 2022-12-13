@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# Destroy
 puts "Cleaning DB..."
 Meeting.destroy_all
 Review.destroy_all
@@ -16,8 +18,7 @@ Chatroom.destroy_all
 User.destroy_all
 Category.destroy_all
 
-
-
+# Spoken languages object creation
 languages = {
   "french" => nil,
   "english" => nil,
@@ -32,6 +33,8 @@ end
 
 puts "Creating languages.."
 
+
+# Categories object creation
 categories = {
   "finance" => nil,
   "real estate" => nil,
@@ -46,6 +49,7 @@ end
 
 puts "Creating categories.."
 
+# Seeding users
 users = [
   {
     properties: {
@@ -54,9 +58,9 @@ users = [
       username: "Heidy24",
       firstname: "Heidy",
       lastname: "Moralez",
-      friend: false,
+      friend: true,
       origin: "colombia",
-      country: "colombia",
+      country: "canada",
       province: "cartagena",
       address: "Chateau De Saint Felipe",
       latitude: 1.1,
@@ -74,8 +78,8 @@ users = [
       firstname: "Estuardo",
       lastname: "Reyes",
       friend: true,
-      origin: "Canada",
-      country: "Canada",
+      origin: "venezuela",
+      country: "canada",
       province: "quebec",
       address: "montegerie",
       latitude: 1.1,
@@ -94,7 +98,7 @@ users = [
       lastname: "benavides",
       friend: true,
       origin: "venezuela",
-      country: "venezuela",
+      country: "france",
       province: "quebec",
       address: "ile de soeurs",
       latitude: 1.1,
@@ -113,7 +117,7 @@ users = [
       lastname: "Benavides",
       friend: true,
       origin: "france",
-      country: "france",
+      country: "mexico",
       province: "ontario",
       address: "niagara",
       latitude: 3.1,

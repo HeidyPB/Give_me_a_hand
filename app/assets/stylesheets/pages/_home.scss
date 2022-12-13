@@ -57,14 +57,33 @@ body {
 
   }
 
+  .btn {
+    color: white;
+    padding: 6px 22px;
+    border-radius: 4px;
+    background: #2196f3;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover{transform: translateY(-6px);
+    background: #1a66ff;}
+
+  .btn span {
+    transition: transform 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin:0;
+  }
 
   .imagehands {
     display: inline-block;
-    height: 350px;
-    width: 400px;
+    height: 380px;
+    width: 480px;
     object-fit: contain;
     object-position: center;
-    box-shadow: 35px 35px 0px 0px #2196f3;
+    box-shadow: 50px 50px 0px 0px #2196f3;
   }
 
 
