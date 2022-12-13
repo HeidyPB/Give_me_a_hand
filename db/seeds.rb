@@ -57,74 +57,208 @@ users = [
       password: "123456",
       username: "Heidy24",
       firstname: "Heidy",
-      lastname: "Moralez",
-      friend: true,
+      lastname: "morales",
+      friend: false,
       origin: "colombia",
       country: "canada",
       province: "cartagena",
-      address: "Chateau De Saint Felipe",
-      latitude: 1.1,
-      longitude: 111.0
+      address: "chateau De Saint Felipe",
+      about_me: "i need someone to help me in my immigration process",
+      latitude: 0.1,
+      longitude: 10.01
     },
     languages: ["spanish", "english", "french"],
-    categories: ["education"]
+    categories: ["education"],
+    # photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670952721/development/k3286xws4wthn7l510omuoa7x5hc.jpg"
   },
 
   {
     properties: {
       email: "estuardo@hotmail.com",
       password: '123456',
-      username: "Stuart",
-      firstname: "Estuardo",
-      lastname: "Reyes",
+      username: "stuart",
+      firstname: "estuardo",
+      lastname: "reyes",
       friend: true,
-      origin: "venezuela",
+      origin: "canada",
       country: "canada",
       province: "quebec",
       address: "montegerie",
+      about_me: "i am a senior web developer, I can help you in your process of arrival in the city",
       latitude: 1.1,
-      longitude: 222.0
+      longitude: 111.0
     },
     languages: ["spanish", "english", "french"],
-    categories: ["education", "coding"]
+    categories: ["education", "coding"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/39506332_zzwdlo.png"
   },
 
   {
     properties: {
-      email:"paula@hotmail.com",
+      email: "paula@hotmail.com",
       password: "123456",
-      username: "MissPaula",
+      username: "paula",
       firstname: "paula",
-      lastname: "benavides",
+      lastname: "rosero",
       friend: true,
-      origin: "venezuela",
-      country: "france",
+      origin: "colombia",
+      country: "canada",
       province: "quebec",
       address: "ile de soeurs",
-      latitude: 1.1,
-      longitude: 111.0
+      about_me: "i work in the area of education, I can guide you on how to start your language classes",
+      latitude: 2.1,
+      longitude: 222.0
     },
     languages: ["spanish"],
-    categories: ["education", "coding"]
+    categories: ["education", "employment"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954584_mxv5os.jpg"
   },
 
   {
     properties: {
       email: "felipe@hotmail.com",
       password: "123456",
-      username: "Pipe",
-      firstname: "Felipe",
-      lastname: "Benavides",
+      username: "felipe86",
+      firstname: "felipe",
+      lastname: "acevedo",
       friend: true,
-      origin: "france",
-      country: "mexico",
+      origin: "colombie",
+      country: "canada",
       province: "ontario",
-      address: "niagara",
+      address: "toronto",
+      about_me: "i can help you open your bank account and insurance in general",
       latitude: 3.1,
       longitude: 333.0
     },
-    languages: ["french"],
-    categories: ["education", "coding"]
+    languages: ["english"],
+    categories: ["finance"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954282_v4dgs3.jpg"
+  },
+
+  {
+    properties: {
+      email: "alfonso@hotmail.com",
+      password: "123456",
+      username: "chaparro",
+      firstname: "chaparro",
+      lastname: "guacheneger",
+      friend: true,
+      origin: "mexico",
+      country: "Canada",
+      province: "alberta",
+      address: "Edmonton",
+      about_me: "I can help you rent an apartment at a good price",
+      latitude: 4.1,
+      longitude: 444.0
+    },
+    languages: ["english","italian"],
+    categories: ["real estate"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865814/give%20me%20a%20hand/guacheneguer_naq1zn.jpg"
+  },
+
+  {
+    properties: {
+      email: "cedric@hotmail.com",
+      password: "123456",
+      username: "cryptocedric",
+      firstname: "cedric",
+      lastname: "lavoie",
+      friend: true,
+      origin: "canada",
+      country: "Canada",
+      province: "british columbia",
+      address: "vancouber",
+      about_me: "great experience with cryptos i can teach you how to invest smartly",
+      latitude: 5.1,
+      longitude: 555.0
+    },
+    languages: ["english"],
+    categories: ["finance"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865429/give%20me%20a%20hand/arrnwrr44ebfchecoh2y_tsawhg.jpg"
+  },
+
+  {
+    properties: {
+      email: "johan@hotmail.com",
+      password: "123456",
+      username: "johanspeak",
+      firstname: "johan",
+      lastname: "mirland",
+      friend: true,
+      origin: "france",
+      country: "Canada",
+      province: "nova scotia",
+      address: "halifax",
+      about_me: "specialist in communication and oratory, I can help you in everything you need",
+      latitude: 6.1,
+      longitude: 666.0
+    },
+    languages: ["english","french"],
+    categories: ["finance"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/115640865_p9509u.png"
+  },
+
+  {
+    properties: {
+      email: "marc@hotmail.com",
+      password: "123456",
+      username: "marc85",
+      firstname: "marc andre",
+      lastname: "camirand",
+      friend: true,
+      origin: "Canada",
+      country: "Canada",
+      province: "new brunswick",
+      address: "fredericton",
+      about_me: "Boat specialist, I can help you find a job",
+      latitude: 7.1,
+      longitude: 777.0
+    },
+    languages: ["english"],
+    categories: ["finance"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/40340046_ihd3u0.jpg"
+  },
+
+  {
+    properties: {
+      email: "marjorie@hotmail.com",
+      password: "123456",
+      username: "marjorie",
+      firstname: "marjorie",
+      lastname: "mondon",
+      friend: true,
+      origin: "france",
+      country: "Canada",
+      province: "manitoba",
+      address: "winnipeg",
+      about_me: "owner of a restaurant chain I can hire you and help rent an apartment nearby",
+      latitude: 8.1,
+      longitude: 888.0
+    },
+    languages: ["english", "french"],
+    categories: ["real estate"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670949764/give%20me%20a%20hand/marjorie_k5zloa.jpg"
+  },
+
+  {
+    properties: {
+      email: "karl@hotmail.com",
+      password: "123456",
+      username: "codingkarl",
+      firstname: "karl",
+      lastname: "hedayati",
+      friend: true,
+      origin: "canada",
+      country: "Canada",
+      province: "saskatchewan",
+      address: "regina",
+      about_me: "programming specialist, I will accompany you in your paperwork when you arrive",
+      latitude: 9.1,
+      longitude: 9.0
+    },
+    languages: ["english","french"],
+    categories: ["coding"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114943045_hiumnu.jpg"
   }
 ]
 
@@ -143,6 +277,11 @@ users.each do |user|
       user: user_instance,
       category: categories[category]
     )
+  end
+
+  if user[:photo]
+    io = URI.open(user[:photo])
+    user_instance.photo.attach(io: io, filename: "nes.png", content_type: "image/png")
   end
 end
 
@@ -275,5 +414,33 @@ puts "Creating users.."
 #   longitude: 555.0
 # )
 
-
 # puts "done"
+# user_0 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg")
+# users[0].photo.attach(io: user_0, filename: "nes.png", content_type: "image/png")
+
+# user_1 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/39506332_zzwdlo.png")
+# users[1].photo.attach(io: user_1, filename: "nes.png", content_type: "image/png")
+
+# user_2 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954584_mxv5os.jpg")
+# users[2].photo.attach(io: user_2, filename: "nes.png", content_type: "image/png")
+
+# user_3 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954282_v4dgs3.jpg")
+# users[3].photo.attach(io: user_3, filename: "nes.png", content_type: "image/png")
+
+# user_4 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865814/give%20me%20a%20hand/guacheneguer_naq1zn.jpg")
+# users[4].photo.attach(io: user_4, filename: "nes.png", content_type: "image/png")
+
+# user_5 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865429/give%20me%20a%20hand/arrnwrr44ebfchecoh2y_tsawhg.jpg")
+# users[5].photo.attach(io: user_5, filename: "nes.png", content_type: "image/png")
+
+# user_6 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/115640865_p9509u.png")
+# users[6].photo.attach(io: user_6, filename: "nes.png", content_type: "image/png")
+
+# user_7 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/40340046_ihd3u0.jpg")
+# users[7].photo.attach(io: user_7, filename: "nes.png", content_type: "image/png")
+
+# user_8 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670949764/give%20me%20a%20hand/marjorie_k5zloa.jpg")
+# users[8].photo.attach(io: user_8, filename: "nes.png", content_type: "image/png")
+
+# user_9 = URI.open("https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114943045_hiumnu.jpg")
+# users[9].photo.attach(io: user_9, filename: "nes.png", content_type: "image/png")
