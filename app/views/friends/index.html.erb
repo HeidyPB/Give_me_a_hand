@@ -1,20 +1,42 @@
-<h1>all friends</h1>
-<br>
-<h4><%= link_to "Become a Friend today!", friends_new_path %></h4>
-<br>
-
 <div class="container" >
+
   <div class="intro">
     <h1>Find a friend to help you settle in your new country</h1>
-    <p>There’s a lot to consider when moving overseas. Need of health insurance?
+    <p>
+      There’s a lot to consider when moving overseas. Need of health insurance?
       What identity documents will you need to apply for? Where will you live and
       work? We’ve been there, and we get it! That’s why we’ve got friends that can
       provide you with an answer to your questions and accompany you along the
       hard process of moving abroad.
     </p>
-    <h3> IMPLEMENT_COUNTING are available to give you a hand!</h3>
+    <h3><span><%= @friends.count %></span> are available to give you a hand!</h3> <span><%= link_to "Become a Friend today!", friends_new_path %></span>
   </div>
 
+<!-- Filters -->
+<%= form_with url: friends_path, method: :get, class: "d-flex" do %>
+  <%= select_tag "country",
+    options_for_select(@countries, params[:country]),
+    prompt: "Country"
+  %>
+
+  <%= select_tag "origin",
+    options_for_select(@origins, params[:origin]),
+    prompt: "Origin"
+  %>
+
+  <%= select_tag "spoken_language",
+    options_for_select(@spoken_languages, params[:spoken_language_ids]),
+    prompt: "Language"
+  %>
+
+  <%= select_tag "category",
+    options_for_select(@categories, params[:category_ids]),
+    prompt: "Category"
+  %>
+
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+<!-- Cards -->
   <div class = "cards">
 
     <% @friends.each do |friend| %>
@@ -38,6 +60,12 @@
               <span class="spoken-language"><%= l.name %></span>
             <% end %>
           </div>
+          <!-- Categories -->
+          <div>
+            <% friend.categories.each do |c| %>
+              <span class="spoken-language"><%= c.name %></span>
+            <% end %>
+          </div>
           <!-- Link to Profile -->
           <%= link_to "visit profile", friend_path(friend), class: "btn btn-flat"  %>
         </div>
@@ -45,4 +73,5 @@
     <% end %> <!-- End @friends[] -->
 
   </div> <!-- End Cards -->
+
 </div> <!-- End Container -->
