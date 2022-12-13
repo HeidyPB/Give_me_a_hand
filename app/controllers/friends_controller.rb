@@ -1,7 +1,6 @@
 class FriendsController < ApplicationController
   def index
     @friends = User.where(friend: true)
-    # raise
   end
 
   def show

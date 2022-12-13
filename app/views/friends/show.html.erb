@@ -19,22 +19,23 @@
 
   <%= link_to 'Book a meeting', new_friend_meeting_path(@friend), class: "btn btn-flat" %>
 
-  <%= link_to 'New review', review_new_path(@friend) %>
-  <%= link_to 'edit', edit_path %>
+  <%= link_to 'Review', review_new_path(@friend), class: "btn btn-flat" %>
+  <%= link_to 'edit', edit_path, class: "btn btn-flat" %>
+  <br>
+  <h2><strong>What friends say about Stuard</strong></h2>
+  <br>
 
-<h2><strong>What friends say about Stuard</strong></h2>
-<div class="row">
-  <div class="col-lg-3">
-    <ul class="list-group">
-      <% @friend.reviews_as_friend.each do |review| %>
-        <br>
-        <li class="list-group-item"><%= 'avatar' %></li>
-        <li class="list-group-item"><%= review.commentary %></li>
-        <li class="list-group-item"><%= '⭐' * review.rating %></li>
-        <li class="list-group-item"><%= 'username' %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
+  <ul class="list-group">
+    <% @friend.reviews_as_friend.each do |review| %>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="card-trip-heidy" alt="...">
+          <li class="list-group-item"><%= review.commentary %></li>
+          <li class="list-group-item"><%= '⭐' * review.rating %></li>
+          <li class="list-group-item"><%= current_user.username %></li>
+        </div>
+      </div>
+    <% end %>
+  </ul>
 </div>
