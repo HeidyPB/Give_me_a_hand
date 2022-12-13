@@ -1,15 +1,17 @@
-<div class="container" >
+<div class="containerindex" >
 
   <div class="intro">
-    <h1>Find a friend to help you settle in your new country</h1>
+    <h1>Find a friend to help you settle in your new country.</h1>
+    <br>
     <p>
-      There’s a lot to consider when moving overseas. Need of health insurance?
+      There's a lot to consider when moving overseas. Need of health insurance?
       What identity documents will you need to apply for? Where will you live and
-      work? We’ve been there, and we get it! That’s why we’ve got friends that can
+      work? We've been there, and we get it! That's why we've got friends that can
       provide you with an answer to your questions and accompany you along the
       hard process of moving abroad.
     </p>
-    <h3><span><%= @friends.count %></span> are available to give you a hand!</h3> <span><%= link_to "Become a Friend today!", friends_new_path %></span>
+    <br>
+    <h3><span id="subr"><%= @friends.count %> friends</span> are available to give you a hand!</h3> <span><%= link_to "Become a Friend today!", friends_new_path %></span>
   </div>
 
 <!-- Filters -->
