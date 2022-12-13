@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get "friends/edit", to: "friends#edit", as: :edit
   patch "friends", to: "friends#update", as: :update
 
-
   # meetings routes
   get 'users/:id/meetings', to: 'meetings#user_meetings', as: :user_meetings
 
