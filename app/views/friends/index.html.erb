@@ -1,7 +1,10 @@
 <div class="containerindex" >
 
   <div class="intro">
-    <h1>Find a friend to help you settle in your new country.</h1>
+  <div class="flex-container">
+    <img src="https://www.bing.com/th/id/OGC.1bfbf72ae3a5c5679bbbcac6f02f46e8?pid=1.7&rurl=https%3a%2f%2flh5.ggpht.com%2f-r5VA7kTG-lA%2fT6JnSSV1BiI%2fAAAAAAAAExk%2f4yJF6as05nc%2fs00%2fM.gif&ehk=LAZQrj9RrHNCavcNJyE0MDtI%2fLgP9O41amOD4cEGw9Y%3d" alt="world" class="flex-item">
+    <h1 class="flex-item">Find a friend to help you settle in your new country.</h1>
+  </div>
     <br>
     <p>
       There's a lot to consider when moving overseas. Need of health insurance?
@@ -11,33 +14,39 @@
       hard process of moving abroad.
     </p>
     <br>
-    <h3><span id="subr"><%= @friends.count %> friends</span> are available to give you a hand!</h3> <span><%= link_to "Become a Friend today!", friends_new_path %></span>
+    <h3><span id="subr"><%= @friends.count %> friends</span> are available to give you a hand!</h3>
+    <br>
+    <span id="link"><%= link_to "Become a Friend today!", friends_new_path %></span>
   </div>
-
+<br>
 <!-- Filters -->
-<%= form_with url: friends_path, method: :get, class: "d-flex" do %>
-  <%= select_tag "country",
-    options_for_select(@countries, params[:country]),
-    prompt: "Country"
-  %>
+<div class="search">
+  <%= form_with url: friends_path, method: :get, class: "d-flex" do %>
+    <%= select_tag "country",
+      options_for_select(@countries, params[:country]),
+      prompt: "Country"
+    %>
 
-  <%= select_tag "origin",
-    options_for_select(@origins, params[:origin]),
-    prompt: "Origin"
-  %>
+    <%= select_tag "origin",
+      options_for_select(@origins, params[:origin]),
+      prompt: "Origin"
+    %>
 
-  <%= select_tag "spoken_language",
-    options_for_select(@spoken_languages, params[:spoken_language_ids]),
-    prompt: "Language"
-  %>
+    <%= select_tag "spoken_language",
+      options_for_select(@spoken_languages, params[:spoken_language_ids]),
+      prompt: "Language"
+    %>
 
-  <%= select_tag "category",
-    options_for_select(@categories, params[:category_ids]),
-    prompt: "Category"
-  %>
+    <%= select_tag "category",
+      options_for_select(@categories, params[:category_ids]),
+      prompt: "Category"
+    %>
 
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<br>
+<br>
 <!-- Cards -->
   <div class = "cards">
 
@@ -50,26 +59,43 @@
         <%end%>
         <div class="card-product-infos">
           <div><h2><%= friend.username %></h2></div>
+
           <!-- Ratings -->
           <div id="stars">
             <% friend.reviews_as_friend.each do |review| %>
               <%= '⭐' * review.rating %>
             <% end %>
           </div>
+
           <!-- Spoken Languages -->
-          <div>
-            <% friend.spoken_languages.each do |l| %>
-              <span class="spoken-language"><%= l.name %></span>
+        <div>
+        <div class="flex-container">
+          <div class="flex-item">
+            <ul>
+              <% friend.spoken_languages.each do |l| %>
+               <li>
+               <span class="spoken-language"><%= l.name %></span>
+               </li>
             <% end %>
+            </ul>
           </div>
+
           <!-- Categories -->
-          <div>
+
+          <div class="flex-item">
+          <ul>
             <% friend.categories.each do |c| %>
+            <li>
               <span class="spoken-language"><%= c.name %></span>
+            </li>
             <% end %>
+            </ul>
           </div>
+        </div>
+        </div>
+
           <!-- Link to Profile -->
-          <%= link_to "visit profile", friend_path(friend), class: "btn btn_custom_dark"  %>
+          <%= link_to "visit profile", friend_path(friend), class: "btn btn-flat"  %>
         </div>
       </div> <!-- End card-product -->
     <% end %> <!-- End @friends[] -->
