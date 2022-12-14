@@ -24,12 +24,6 @@ export default class extends Controller {
   }
 
   // Private
-  #insertMessageAndScrollDown(data) {
-    // Logic to know if the sender is the current_user
-    const currentUserIsSender = this.currentUserIdValue === data.sender_id
-    this.messagesTarget.insertAdjacentHTML("beforeend", data)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
-  }
 
   #buildMessageElement(currentUserIsSender, message) {
     return `
