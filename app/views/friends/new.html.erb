@@ -1,5 +1,38 @@
-<br>
+<%# <br>
 <div class="text-center">
   <h1>Help someone today by becoming a friend!</h1>
   <%= render "form", friend: @friend %>
+<%# </div> %> %>
+
+<div class="compartment">
+
+  <div>
+    <h1>Help someone today by becoming a friend</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec ac tellus mi. Fusce euismod eget turpis sed ornare.
+      Pellentesque bibendum ligula non leo dictum,
+      vel elementum velit ullamcorpe
+    </p>
+  </div>
+
+  <div>
+    <%= simple_form_for(current_user, url: :update_user) do |f| %>
+      <%= f.input :firstname %>
+      <%= f.input :country, as: :string %>
+
+
+      <%= f.input :origin %>
+
+      <%= f.input :photo, as: :file %>
+  </div>
+  <div>
+      <%= f.input :lastname %>
+      <%= f.input :province %>
+
+      <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
+      <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
