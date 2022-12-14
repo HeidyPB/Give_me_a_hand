@@ -19,6 +19,8 @@ User.destroy_all
 Category.destroy_all
 
 # Spoken languages object creation
+puts "Creating languages..."
+
 languages = {
   "french" => nil,
   "english" => nil,
@@ -31,10 +33,9 @@ languages.each do |key, _|
   languages[key] = SpokenLanguage.create!(name: key)
 end
 
-puts "Creating languages.."
-
-
 # Categories object creation
+puts "Creating categories..."
+
 categories = {
   "finance" => nil,
   "real estate" => nil,
@@ -47,9 +48,10 @@ categories.each do |key, _|
   categories[key] = Category.create!(name: key)
 end
 
-puts "Creating categories.."
 
 # Seeding users
+puts "Creating users..."
+
 users = [
   {
     properties: {
@@ -285,7 +287,7 @@ users.each do |user|
   end
 end
 
-puts "Creating users.."
+Chatroom.create!(name: "general")
 
 # User.create!(
 #   email:"heidy@hotmail.com",
