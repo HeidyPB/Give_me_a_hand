@@ -104,7 +104,6 @@
   font-weight: bold;
   margin: 0;
   color: #2196f3;
-  text-decoration: underline;
 }
 
 #link {
@@ -138,19 +137,4 @@
   border-radius: 4px;
   background:  #2196f3;
   transition: background 0.3s ease;
-}
-
-.btn-flat:hover {
-  background: #4D04C4;
-  color: white;
-}
-
-.btn-gradient {
-  color: white;
-  padding: 1px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#2196f3, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
 }
