@@ -30,6 +30,9 @@
 <br>
   <%= render "meetings/meeting_modal" %>
   <%= link_to 'New review', review_new_path(@friend), class:"btn btn_custom_dark" %>
+  <a class="btn btn_custom_dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Let's Chat!
+  </a>
 
 <br>
 <br>
@@ -51,13 +54,10 @@
   </ul>
 
   <!-- Bootstrap Collapse -->
-  <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
+
+
+<p>
+
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">

@@ -39,3 +39,31 @@ h2 {
   margin: 0;
   color:#2196f3;
 }
+
+// Chatroom CSS
+.chatbox {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  border-radius: 45px;
+  border-style: solid;border-color: #d3d3d3;
+  border-width: 1px;
+  box-shadow: 0 0 60px #778899;
+  height: 400px;
+  width: 350px;
+}
+
+input[type=text] {
+  color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+  border-style: none;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://res.cloudinary.com/dwvrcwjwc/image/upload/v1670613261/Miscellaneous/profile_logo_os91ty.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  box-shadow: 5px 10px 8px #888888;
+}
