@@ -2,7 +2,6 @@
   height: 450px;
   width: 450px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
   padding: 20px;
   margin: 0 auto;
@@ -16,32 +15,38 @@
   margin-bottom: 10;
   margin-top: -13px;
   margin-bottom: 20px;
+  text-align: center;
 }
-
 
 .modal-content-meeting{
   position: relative;
   flex: 1 1 auto;
+}
+.form_create_meeting{
+  input, select, textarea {
+    border: 1px solid  #2096f3;
+  }
 
 }
 
 #blue {
  color: #2096f3;
  font-size: 18px;
-
+ font-weight: bold;
 }
 
 #title_book{
   color: #2096f3;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
+  text-align: center;
 }
 
-#form_create_meeting{
 
-}
 #boton_meeting{
   display: block;
   margin-right: auto;
   margin-left: auto;
+  padding-block: 14px;
+  color: #2096f3;
 }

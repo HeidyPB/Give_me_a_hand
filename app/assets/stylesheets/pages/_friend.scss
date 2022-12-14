@@ -85,7 +85,16 @@ input[type=submit] {
   border-top: 1px solid #333;
   width: 100%;
 }
+.card-img-top{
+  width: 150px;
+  border-radius: 50%;
+  align-self: center;
+}
 
-.chatuser {
+.card-body{
+  text-align: center;
+}
 
+.card{
+  border-color: white;
 }
