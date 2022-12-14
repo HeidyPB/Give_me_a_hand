@@ -23,5 +23,33 @@
   margin: 0 auto;
   border-radius: 10px;
   font-size: 12;
-
 }
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  }
+
+  .rating span {
+  display: inline-block;
+  width: 1.1em;
+  font-size: 2.8em;
+  color: #ccc;
+  cursor: pointer;
+  text-shadow: 0 0 1px #666;
+  }
+
+  .rating span:hover,
+  .rating span:hover ~ span {
+  color: gold;
+  text-shadow: 0 0 5px #e2e2e2;
+  }
+
+  .rating span:active,
+  .rating span:active ~ span {
+  color: yellow;
+  }
+  .commentary{
+    background-color: white;
+    border-color: #2196f3;
+    border-radius: 5px;
+  }
