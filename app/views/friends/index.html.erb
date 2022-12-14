@@ -14,7 +14,7 @@
       hard process of moving abroad.
     </p>
     <br>
-    <h3><span id="subr"><%= @friends.count %> friends</span> are available to give you a hand!</h3>
+    <h3><span id="subr"><%= pluralize( @friends.count, 'friend' ) %></span> <%= @friends.count > 1 ? "are" : "is" %> available to give you a hand!</h3>
     <br>
     <span id="link"><%= link_to "Become a Friend today!", friends_new_path %></span>
   </div>
@@ -58,7 +58,7 @@
           <%= image_tag('givemeahand.jpg')%>
         <%end%>
         <div class="card-product-infos">
-          <div><h2><%= friend.username %></h2></div>
+          <div><h2><%= friend.username.capitalize %></h2></div>
 
           <!-- Ratings -->
           <div id="stars">
@@ -72,7 +72,7 @@
             <ul>
               <% friend.spoken_languages.each do |l| %>
                <li>
-               <span class="spoken-language"><%= l.name %></span>
+               <span class="spoken-language"><%= l.name.capitalize %></span>
                </li>
             <% end %>
             </ul>
@@ -84,7 +84,7 @@
           <ul>
             <% friend.categories.each do |c| %>
             <li>
-              <span class="spoken-language"><%= c.name %></span>
+              <span class="spoken-language"><%= c.name.capitalize %></span>
             </li>
             <% end %>
             </ul>
@@ -93,7 +93,7 @@
         </div>
 
           <!-- Link to Profile -->
-          <%= link_to "visit profile", friend_path(friend), class: "btn btn-flat"  %>
+          <%= link_to "visit profile", friend_path(friend), class: "btn btn_custom_dark"  %>
         </div>
       </div> <!-- End card-product -->
     <% end %> <!-- End @friends[] -->
