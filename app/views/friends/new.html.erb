@@ -19,19 +19,17 @@
   <div>
     <%= simple_form_for(current_user, url: :update_user) do |f| %>
       <%= f.input :firstname %>
+      <%= f.input :username %>
       <%= f.input :country, as: :string %>
-
-
-      <%= f.input :origin %>
-
+      <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
       <%= f.input :photo, as: :file %>
   </div>
   <div>
       <%= f.input :lastname %>
+      <%= f.input :origin %>
       <%= f.input :province %>
-
-      <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
       <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
+      <%= f.input :about_me %>
       <%= f.submit %>
     <% end %>
   </div>
