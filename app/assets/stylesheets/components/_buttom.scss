@@ -26,3 +26,22 @@
   font-size: 1.2em;
   margin:0;
 }
+
+.btn_chatroom {
+  background:  white;
+  border-radius: 0  10px 10px 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #eee;
+  padding: 12px 20px 12px 20px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.btn_chatroom:hover{
+  transform: translateX(0px);
+  background-color: #2096f3;
+  color: white;
+}
