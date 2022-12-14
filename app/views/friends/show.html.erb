@@ -30,25 +30,52 @@
 <br>
   <%= render "meetings/meeting_modal" %>
   <%= link_to 'New review', review_new_path(@friend), class:"btn btn_custom_dark" %>
-
 <br>
 <br>
 <br>
 <h2><strong>What friends say about <%= @friend.username.capitalize %></strong></h2>
-  <br>
-  <ul class="list-group">
-    <% @friend.reviews_as_friend.each do |review| %>
-      <br>
-      <div class="row">
-        <div class="col-4">
-          <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="" alt="...">
-          <li class="list-group-item"><%= review.commentary %></li>
-          <li class="list-group-item"><%= '⭐' * review.rating %></li>
-          <li class="list-group-item"><%= current_user.username %></li>
+<br>
+<br>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <% (@friend.reviews_as_friend.count).times do |i| %>
+      <% if i.zero? %>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= i %>" class="active" aria-current="true" aria-label="Slide <%= i + 1 %>"></button>
+      <% else %>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= i %>" aria-label="Slide <%= i + 1 %>"></button>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="carousel-inner">
+    <% @friend.reviews_as_friend.each_with_index do |review, index| %>
+      <div class="carousel-item <%= "active" if index.zero? %>">
+        <div class="card" style="width: 18rem;">
+          <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><%= review.commentary %></p>
+            <p class="card-text"><%= '⭐' * review.rating %></p>
+            <p class="card-text"><%= current_user.username %></p>
+          </div>
         </div>
       </div>
     <% end %>
-  </ul>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<br>
+<br>
 
   <!-- Bootstrap Collapse -->
   <p>

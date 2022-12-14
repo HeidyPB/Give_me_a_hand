@@ -169,7 +169,7 @@ users = [
       origin: "canada",
       country: "Canada",
       province: "british columbia",
-      address: "vancouber",
+      address: "vancouver",
       about_me: "great experience with cryptos i can teach you how to invest smartly",
       latitude: 5.1,
       longitude: 555.0
