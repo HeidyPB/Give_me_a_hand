@@ -13,4 +13,11 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   validates_length_of :password, in: 6..20, on: :create
+
+  def average_rating
+    number_of_reviews = reviews_as_friend.count
+    return number_of_reviews if number_of_reviews.zero?
+
+    return reviews_as_friend.pluck(:rating).sum / number_of_reviews
+  end
 end
