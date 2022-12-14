@@ -29,7 +29,7 @@ class FriendsController < ApplicationController
     @meeting = Meeting.new
 
     # Provide info for chat
-    @chatroom = Chatroom.where(:name == "general")
+    @chatroom = Chatroom.first
     @message = Message.new
   end
 
