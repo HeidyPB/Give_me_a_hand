@@ -1,22 +1,27 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dc7s25hrw/image/upload/v1670700724/give%20me%20a%20hand/meeting_lfysx5.jpg) ;">
   <div class="containerb">
-    <h1><strong>New reviews</strong></h1>
+    <h1><strong>Rate your meeting</strong></h1>
   </div>
 </div>
-<div id= "container_review">
-  <div class="rating">
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-  </div>
-<p> Hey <%=current_user.firstname%>! How did you find your experience with <%=@friend.firstname %><p>
-  <%= simple_form_for([@friend, @review], url: review_path(@friend.id)) do |f| %>
-    <div class = "commentary">
-      <%= f.input :commentary %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= simple_form_for([@friend, @review], url: review_path(@friend.id)) do |f| %>
+        <br>
+        <div class="d-flex justify-content-center">
+          <div class="star">
+            <%= f.input :rating, collection: (1..5).to_a, input_html: {data: {controller: "star-rating"}} %>
+          </div>
+        </div>
+          <div class="d-flex justify-content-center">
+            <p> Hey <%=current_user.firstname%>! How did you find your experience with <%=@friend.firstname %><p>
+          </div>
+        <%= f.input :commentary %>
+        <div class="d-flex justify-content-center">
+          <%= f.submit "Send your review", class:"btn btn_custom_dark" %>
+        </div>
+      <% end %>
     </div>
-      <% f.input :rating %>
-    <%= f.submit "Send your review", class: "btn btn_custom_dark" %>
-  <% end %>
+  </div>
 </div>
