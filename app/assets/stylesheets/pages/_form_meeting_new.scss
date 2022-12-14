@@ -1,6 +1,6 @@
 .container_meeting_new {
-  height: 400px;
-  width: 500px;
+  height: 450px;
+  width: 450px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
@@ -9,11 +9,33 @@
   border-radius: 10px;
   font-size: 12;
 }
+.container_meeting_new p {
+  font-size: 18px;
+  line-height: -0.6;
+  opacity: 7.7;
+  margin-bottom: 10;
+  margin-top: -13px;
+  margin-bottom: 20px;
+}
+
+
+.modal-content-meeting{
+  position: relative;
+  flex: 1 1 auto;
+
+}
 
 #title_book{
   color: #2096f3;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 #form_create_meeting{
 
+}
+#boton_meeting{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
