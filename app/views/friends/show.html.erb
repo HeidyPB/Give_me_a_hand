@@ -13,7 +13,7 @@
       <br>
       <h3>📍<%= @friend.province.capitalize %>, <%= @friend.address.capitalize %></h3>
       <br>
-      <h4>I am a friend that ...<%= @friend.about_me %></h4>
+      <h4>About me: <%= @friend.about_me %></h4>
        <h3></h3>
   </div>
 </div>
@@ -29,31 +29,18 @@
 <p>It is a pleasure for me to be able to help you! Do not hesitate to count on me and ask me about what you need.  We are here for you, discover the resources we have to welcome you and accompany you on your way to establish yourself in this country.</p>
 <br>
   <%= render "meetings/meeting_modal" %>
-  <%= link_to 'New review', review_new_path(@friend) %>
+  <%= link_to 'New review', review_new_path(@friend), class:"btn btn_custom_dark" %>
 
 <br>
 <br>
 <br>
 <h2><strong>What friends say about <%= @friend.username.capitalize %></strong></h2>
-<div class="row">
-  <div class="col-lg-3">
-    <ul class="list-group">
-      <% @friend.reviews_as_friend.each do |review| %>
-        <br>
-        <li class="list-group-item"><%= 'avatar' %></li>
-        <li class="list-group-item"><%= review.commentary %></li>
-        <li class="list-group-item"><%= '⭐' * review.rating %></li>
-        <li class="list-group-item"><%= 'username' %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
+  <br>
   <ul class="list-group">
     <% @friend.reviews_as_friend.each do |review| %>
       <br>
       <div class="row">
-        <div class="col-6">
+        <div class="col-4">
           <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="card-trip-heidy" alt="...">
           <li class="list-group-item"><%= review.commentary %></li>
           <li class="list-group-item"><%= '⭐' * review.rating %></li>
@@ -62,4 +49,21 @@
       </div>
     <% end %>
   </ul>
+
+  <!-- Bootstrap Collapse -->
+  <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <!-- show chatroom -->
+    <%= render "chat" %>
+  </div>
+</div>
+<!-- End Collapse -->
 </div>

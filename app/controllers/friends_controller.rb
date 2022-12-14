@@ -27,6 +27,10 @@ class FriendsController < ApplicationController
     @friend = User.find(params[:id])
     @reviews = @friend.reviews
     @meeting = Meeting.new
+
+    # Provide info for chat
+    @chatroom = Chatroom.first
+    @message = Message.new
   end
 
   def new
