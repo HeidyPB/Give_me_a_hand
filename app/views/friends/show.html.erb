@@ -51,23 +51,25 @@
   <div class="carousel-inner">
     <% @friend.reviews_as_friend.each_with_index do |review, index| %>
       <div class="carousel-item <%= "active" if index.zero? %>">
-        <div class="card" style="width: 18rem;">
+        <div class="card-avatar">
+          <div class="card" style="width: 70rem;">
           <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text"><%= review.commentary %></p>
-            <p class="card-text"><%= '⭐' * review.rating %></p>
-            <p class="card-text"><%= current_user.username %></p>
-          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= review.commentary %></p>
+          <p class="card-text"><%= '⭐' * review.rating %></p>
+          <p class="card-text"><%= current_user.username %></p>
+        </div>
         </div>
       </div>
     <% end %>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span  class="carousel-control-prev-icon" class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon" class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>

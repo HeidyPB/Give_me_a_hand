@@ -55,6 +55,10 @@ h2 {
   border-color: white;
 }
 
-// .list-group{
-//   display: grid | inline-grid;
-// }
+.carousel-control-next-icon {
+  filter: invert(108%);
+}
+
+.carousel-control-prev-icon {
+  filter: invert(108%);
+}

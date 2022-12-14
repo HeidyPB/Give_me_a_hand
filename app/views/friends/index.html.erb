@@ -62,9 +62,7 @@
 
           <!-- Ratings -->
           <div id="stars">
-            <% friend.reviews_as_friend.each do |review| %>
-              <%= '⭐' * review.rating %>
-            <% end %>
+            <%= '⭐' * friend.average_rating %>
           </div>
 
           <!-- Spoken Languages -->
