@@ -27,6 +27,10 @@ class FriendsController < ApplicationController
     @friend = User.find(params[:id])
     @reviews = @friend.reviews
     @meeting = Meeting.new
+
+    # Provide info for chat
+    @chatroom = Chatroom.first
+    @message = Message.new
   end
 
   def new
@@ -92,6 +96,6 @@ class FriendsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :origin, :province, :category, :address, :photo)
+    params.require(:user).permit(:firstname, :lastname, :username, :origin, :province, :category, :address, :photo)
   end
 end
