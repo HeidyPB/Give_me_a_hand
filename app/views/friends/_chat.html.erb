@@ -2,11 +2,16 @@
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
-  <h1>#<%= @chatroom.name %></h1>
+  <!-- <h1>#<%= @chatroom.name %></h1> -->
+<div class="d-flex align-items-center justify-content-between m-3">
+  <span class = "message-line"></span>
+  <span class = "mx-2" >Messages</span>
+  <span class = "message-line"></span>
+</div>
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+          <%= render "messages/message", message: message %>
     <% end %>
   </div>
 
@@ -15,9 +20,12 @@
   %>
     <%= f.input :content,
       label: false,
-      placeholder: "Message ##{@chatroom.name}",
+      placeholder: "Type a message",
       wrapper_html: {class: "flex-grow-1"}
     %>
-    <%= f.submit "Send", class: "btn btn_custom_dark mb-3" %>
+    <%= button_tag type: 'submit', class: "btn btn_chatroom mb-3" do %>
+      <%# <i class="bi bi-send-fill"></i> %>
+      <%= image_tag('send.png', size: '15x15') %>
+    <% end %>
   <% end %>
 </div>
