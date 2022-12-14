@@ -1,12 +1,6 @@
-<%# <br>
-<div class="text-center">
-  <h1>Help someone today by becoming a friend!</h1>
-  <%= render "form", friend: @friend %>
-<%# </div> %> %>
-
 <div class="compartment">
 
-  <div>
+  <div id= "textnewf">
     <h1>Help someone today by becoming a friend</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -16,19 +10,19 @@
     </p>
   </div>
 
-  <div>
+  <div id="form-new-friend">
     <%= simple_form_for(current_user, url: :update_user) do |f| %>
-      <%= f.input :firstname %>
-      <%= f.input :username %>
-      <%= f.input :country, as: :string %>
-      <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
-      <%= f.input :photo, as: :file %>
+    <p class = "wordsform"><%= f.input :firstname %></p>
+    <%= f.input :username %>
+    <%= f.input :country, as: :string %>
+    <%= f.association :spoken_languages, input_html: { multiple: true }, as: :check_boxes,  include_hidden: false %>
+    <%= f.input :photo, as: :file %>
   </div>
-  <div>
+  <div id="form-new-friend">
       <%= f.input :lastname %>
       <%= f.input :origin %>
       <%= f.input :province %>
-      <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
+      <%= f.association :categories, as: :check_boxes, input_html: { multiple: true }, include_hidden: false %>
       <%= f.input :about_me %>
       <%= f.submit %>
     <% end %>
