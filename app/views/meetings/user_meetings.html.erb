@@ -16,12 +16,12 @@
         <%end%>
       </div>
       <div class="card-meeting-infos">
-        <h6> You have a meeting with <%= meeting.friend.firstname %> <%= meeting.friend.lastname %><h6>
+        <h6> You have a meeting with <span id="blue"><%= meeting.friend.firstname %> <%= meeting.friend.lastname %></span><h6>
         <p> Title: <%= meeting.title %><p>
-        <p><i class="fa-solid fa-calendar-days"></i> : <%= meeting.date %></p>
-        <p><strong>Description:</strong><%= meeting.description %></p>
+        <p><i id="blue" class="fa-solid fa-calendar-days"></i> : <%= meeting.date %></p>
+        <p><strong>Description: </strong><%= meeting.description %></p>
         <div data-controller="videoroom">
-          <button data-action="click->videoroom#joinVideoroom" id="dailyTrigger"><i class="fa-solid fa-video"></i> Go to the videoroom</button>
+          <button data-action="click->videoroom#joinVideoroom" id="dailyTrigger"><i id="blue" class="fa-solid fa-video"></i><span id="blue"> Go to the videoroom</span></button>
           <div id="video-container" data-videoroom-target="videoContainer"></div>
         </div>
       </div>
