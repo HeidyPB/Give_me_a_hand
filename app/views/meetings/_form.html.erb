@@ -1,16 +1,16 @@
 <div class="container_meeting_new">
-  <h5 id= title_book>Book a meeting with <%=friend.firstname %> <%=friend.lastname%></h5>
+  <h6 id= title_book>Book a meeting with <%=friend.firstname %> <%=friend.lastname%></h5>
   <p>Choose a time slot that suits your schedule</p>
-  <div id= form_create_meeting>
+  <div class= form_create_meeting>
     <%= simple_form_for([friend, meeting], url: friend_meetings_path(friend.id)) do |f| %>
       <%= f.input :date, placeholder: 'Date', label:false, as: :string,
                       wrapper_html: { class: "mb-4" },
                       label_html: { class: "form-label text-secondary fw-bold" },
                       input_html: { data: { controller: "flatpickr" } } %>
-      <%= f.input :title, placeholder: 'Title', label:false, as: :select, collection: Meeting::TITLES %>
+      <%= f.input :title, prompt: 'Select a title…', label:false, as: :select, collection: Meeting::TITLES, include_blank: false %>
       <%= f.input :description, placeholder: 'Description', label:false %>
-      <div id= boton_meeting>
-        <%= f.submit class:"btn btn_custom_dark"%>
+      <div id= "boton_meeting">
+        <%= f.submit class: "btn btn_custom_dark"%>
       </div>
     <% end %>
   </div>
