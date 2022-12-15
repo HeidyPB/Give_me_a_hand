@@ -18,11 +18,18 @@
   height: 135px;
   background: white;
   align-items: center;
-  padding: 10px;
-  margin: auto;
+  padding: 10px 0px;
+  margin: auto 0px;
 }
 
 .friendcategory h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color:#2196f3;
+}
+
+.bluefon {
   font-size: 30px;
   font-weight: bold;
   margin: 0;
@@ -124,7 +131,7 @@ h2 {
   text-justify: center;
 }
 
-.card-commentary{
+.card-commentary {
   word-wrap: break-word;
 }
 
@@ -139,6 +146,15 @@ h2 {
   text-align: right;
 }
 
-.text-class{
+.text-class {
   color:red;
+}
+
+// custom
+.upsacer {
+  margin-top: 20px;
+}
+
+.upsacersec {
+  margin-top: 40px;
 }

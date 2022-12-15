@@ -12,37 +12,31 @@
       <br>
       <h3>📍<%= @friend.origin.capitalize %> - <%= @friend.province.capitalize %></h3>
       <br>
-      <h3><i class="fa-solid fa-earth-americas iconblue"></i> Spoken languages:<% @friend.spoken_languages.each do |l| %>
-
-               -<%= l.name.capitalize %>
-
+      <h3></i> Spoken languages:<% @friend.spoken_languages.each do |l| %>
+        <i class="fa-solid fa-earth-americas iconblue"></i><%= l.name.capitalize %>
             <% end %></h3>
   </div>
 </div>
 <br>
 <div class="friendcategory">
-  <h1>I can help friends with...</h1>
-  <br>
-  <ul>
-    <% @friend.categories.each do |category| %>
-     <li><strong> <%= category.name.capitalize %></strong></li>
-    <% end %>
+  <h1><%= @friend.firstname.capitalize %> can help friends with...</h1>
+  <% @friend.categories.each do |category| %>
+    <div>
+      <i class="fa-solid fa-handshake-angle iconblue"></i><strong> <%= category.name.capitalize %></strong>
+    </div>
+  <% end %>
 </div>
-<h5><strong> About me:  <%= @friend.about_me.capitalize %>.</strong></h5>
-<br>
+<h5 class="bluefon">About me:</h5>
+<%= @friend.about_me.capitalize %>.
+<div class="upsacer">
   <%= render "meetings/meeting_modal" %>
   <%= link_to 'New review', review_new_path(@friend), class:"btn btn_custom_dark" %>
   <a class="btn btn_custom_dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Let's Chat!
   </a>
+</div>
 
-<br>
-<br>
-<br>
-<h2><strong>What friends say about <%= @friend.username.capitalize %></strong></h2>
-<br>
-<br>
-
+<h2 class="upsacersec"><strong>What friends say about <%= @friend.username.capitalize %></strong></h2>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="900000">
   <div class="carousel-indicators">
