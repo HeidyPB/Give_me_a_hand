@@ -7,7 +7,7 @@
                       wrapper_html: { class: "mb-4" },
                       label_html: { class: "form-label text-secondary fw-bold" },
                       input_html: { data: { controller: "flatpickr" } } %>
-      <%= f.input :title, prompt: 'Select a title…', label:false, as: :select, collection: Meeting::TITLES, include_blank: false %>
+      <%= f.input :title, prompt: 'Select a title…', label:false, as: :select, collection: @friend_categories, include_blank: false %>
       <%= f.input :description, placeholder: 'Description', label:false %>
       <div id= "boton_meeting">
         <%= f.submit class: "btn btn_custom_dark"%>

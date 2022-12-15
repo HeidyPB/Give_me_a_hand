@@ -27,6 +27,7 @@ class FriendsController < ApplicationController
     @friend = User.find(params[:id])
     @reviews = @friend.reviews
     @meeting = Meeting.new
+    @friend_categories = Meeting::TITLES & @friend.categories.map { |c| c.name.capitalize }
 
     # Provide info for chat
     @chatroom = Chatroom.first
