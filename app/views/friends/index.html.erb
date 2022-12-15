@@ -34,12 +34,12 @@
     %>
 
     <%= select_tag "spoken_language",
-      options_for_select(@spoken_languages, params[:spoken_language_ids]),
+      options_for_select(@spoken_languages, params[:spoken_language]),
       prompt: "Language"
     %>
 
     <%= select_tag "category",
-      options_for_select(@categories, params[:category_ids]),
+      options_for_select(@categories, params[:category]),
       prompt: "Category"
     %>
 
