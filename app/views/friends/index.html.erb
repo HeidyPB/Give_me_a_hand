@@ -62,25 +62,32 @@
         <%end%>
 
         <div class="card-product-infos">
-          <div><h2><%= friend.username.capitalize %></h2></div>
+          <div class="d-flex align-items-center justify-content-between">
+            <div><h2><%= friend.username.capitalize %></h2></div>
 
-          <!-- Ratings -->
-          <div id="stars">
-            <%= '⭐' * friend.average_rating %>
+            <!-- Ratings -->
+            <div id="stars">
+              <%= '⭐' * friend.average_rating %>
+            </div>
           </div>
 
-          <!-- Spoken Languages -->
-          <div class="spacer">
-            <% friend.spoken_languages.each do |l| %>
-                <span class="friend-attributes"><i class="fa-solid fa-earth-americas iconblue"></i><%= l.name.capitalize %></span>
-            <% end %>
-          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <!-- Spoken Languages -->
+            <div class="spacer">
+              <% friend.spoken_languages.each do |l| %>
+                  <span class="friend-attributes"><i class="fa-solid fa-earth-americas iconblue"></i><%= l.name.capitalize %></span>
+              <% end %>
+            </div>
 
-          <!-- Categories -->
-          <div class="spacer">
-            <% friend.categories.each do |c| %>
-              <span class="friend-attributes"><i class="fa-solid fa-handshake-angle iconblue"></i><%= c.name.capitalize %></span>
-            <% end %>
+            <!-- Categories -->
+            <div class="spacer">
+              <% friend.categories.each do |c| %>
+                <span class="friend-attributes"><i class="fa-solid fa-handshake-angle iconblue"></i><%= c.name.capitalize %></span>
+              <% end %>
+            </div>
+          </div>
+          <div class="d-flex">
+            <p class="pt-3"><%= friend.about_me %></p>
           </div>
 
           <!-- Link to Profile -->
