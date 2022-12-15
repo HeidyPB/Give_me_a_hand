@@ -6,14 +6,18 @@
       <%= image_tag('givemeahand.jpg')%>
     <%end%>
     <div class="card-friend-infos">
-      <h1>Friend <%= @friend.username %></h1>
+      <h1>Friend <%= @friend.username.capitalize %></h1>
       <br>
       <h3><%= @friend.firstname.capitalize %> <%= @friend.lastname.capitalize %></h3>
-      <h3><%= @friend.origin.capitalize %></h3>
       <br>
-      <h3>📍<%= @friend.province.capitalize %>, <%= @friend.address.capitalize %></h3>
+      <h3>📍<%= @friend.origin.capitalize %> - <%= @friend.province.capitalize %>, <%= @friend.address.capitalize %></h3>
       <br>
-      <h4>About me: <%= @friend.about_me %></h4>
+      <h3>Spoken languages:<% @friend.spoken_languages.each do |l| %>
+
+               -<%= l.name.capitalize %>
+
+            <% end %></h3>
+      <h4>About me: <%= @friend.about_me.capitalize %></h4>
        <h3></h3>
   </div>
 </div>
