@@ -55,28 +55,17 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
 .card-product-infos h2 {
   font-size: 20px;
   padding: 10px;
   color: #000000;
 }
 
-// subtle differences for cards
-
-
 // ratings (stars)
 #stars {
   margin-bottom: 10 px;
 }
-
-// Spoken languages
-//.spoken-language {
-  //border-style: solid;
-  //border-color: #2196f3;
-  //border-radius: 12px;
-  //border-width: 2px;
-  //padding: 3px 10px;
-//}
 
 // miscellaneous
 .intro {
@@ -121,6 +110,7 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
+
 #link {
   opacity: 1;
 }
@@ -130,7 +120,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .flex-container {
   display: flex;
@@ -162,6 +151,19 @@
 
 // filters
 #country, #origin, #spoken_language, #category {
+  background-color: #ffffff;
+  margin: 12px;
+  border-radius: 8px;
+  border-color: #2196f3;
+  border-width: 2px;
+  width: 120px;
+  padding: 5px;
+}
+
+#search-filter {
+  border-style: solid;
+
+  //same as filters
   background-color: #ffffff;
   margin: 12px;
   border-radius: 8px;

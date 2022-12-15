@@ -55,7 +55,7 @@ h2 {
   width: 350px;
 }
 
-input[type=text] {
+.chatbox input[type=text] {
   color: #000000;
   width: 100%;
   box-sizing: border-box;
@@ -70,7 +70,7 @@ input[type=text] {
   box-shadow: 5px 10px 8px #888888;
 }
 
-input[type=submit] {
+.chatbox input[type=submit] {
   background-color: white;
   border: none;
   color: black;
@@ -90,6 +90,8 @@ input[type=submit] {
   border-radius: 50%;
   align-self: center;
 }
+
+// End Chatroom
 
 .card-body{
   text-align: center;
