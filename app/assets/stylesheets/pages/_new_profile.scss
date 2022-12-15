@@ -1,6 +1,7 @@
 .compartment {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 23px;
   min-height: 78vh;
 }
@@ -24,8 +25,14 @@
   text-decoration-color: black;
 }
 
-#form-new-friend{
+.form-new-friend{
   border-color: #2096f3;
+  min-width: 26rem;
+}
+
+.friend-form-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .wordsform{
