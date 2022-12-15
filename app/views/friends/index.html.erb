@@ -15,8 +15,8 @@
     </p>
     <br>
     <h3><span id="subr"><%= pluralize( @friends.count, 'friend' ) %></span> <%= @friends.count > 1 ? "are" : "is" %> available to give you a hand!</h3>
+    <%= link_to "Become a Friend today!", friends_new_path, class: "btn btn_custom_dark" %>
     <br>
-    <span id="link"><%= link_to "Become a Friend today!", friends_new_path %></span>
   </div> <!-- END intro -->
 <br>
 <!-- Filters -->
@@ -52,12 +52,16 @@
   <div class = "cards">
 
     <% @friends.each do |friend| %>
+
       <div class="card-product">
+
+        <!-- photo -->
         <% if friend.photo.attached? %>
           <%= cl_image_tag friend.photo.key, crop: :fill %>
         <%else%>
           <%= image_tag('givemeahand.jpg')%>
         <%end%>
+
         <div class="card-product-infos">
           <div><h2><%= friend.username.capitalize %></h2></div>
 
@@ -67,36 +71,26 @@
           </div>
 
           <!-- Spoken Languages -->
-        <div>
-        <div class="flex-container">
-          <div class="flex-item">
-            <ul>
-              <% friend.spoken_languages.each do |l| %>
-               <li>
-               <span class="spoken-language"><%= l.name.capitalize %></span>
-               </li>
+          <div class="spacer">
+            <% friend.spoken_languages.each do |l| %>
+                <span class="friend-attributes"><i class="fa-solid fa-earth-americas iconblue"></i><%= l.name.capitalize %></span>
             <% end %>
-            </ul>
           </div>
 
           <!-- Categories -->
-
-          <div class="flex-item">
-          <ul>
+          <div class="spacer">
             <% friend.categories.each do |c| %>
-            <li>
-              <span class="spoken-language"><%= c.name.capitalize %></span>
-            </li>
+              <span class="friend-attributes"><i class="fa-solid fa-handshake-angle iconblue"></i><%= c.name.capitalize %></span>
             <% end %>
-            </ul>
           </div>
-        </div>
-        </div>
 
           <!-- Link to Profile -->
-          <%= link_to "visit profile", friend_path(friend), class: "btn btn_custom_dark"  %>
-        </div>
+          <%= link_to "visit profile", friend_path(friend), class: "btn btn_custom_dark spacer"  %>
+
+        </div> <!-- End card-product-INFOS -->
+
       </div> <!-- End card-product -->
+
     <% end %> <!-- End @friends[] -->
 
   </div> <!-- End Cards -->
