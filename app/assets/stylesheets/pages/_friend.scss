@@ -49,10 +49,12 @@ h2 {
 
 .card-body{
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .card{
-  border-color: white;
+  border-color: rgb(251, 249, 249);
 }
 
 .carousel-control-next-icon {
@@ -61,4 +63,20 @@ h2 {
 
 .carousel-control-prev-icon {
   filter: invert(108%);
+}
+
+.avatar-review{
+  width: 200px;
+  height: 150;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+
+.card-text{
+  font-size: 22px;
+  text-justify: center;
+}
+
+.card-commentary{
+  word-wrap: break-word;
 }

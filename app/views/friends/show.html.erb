@@ -38,7 +38,7 @@
 <br>
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="900000">
   <div class="carousel-indicators">
     <% (@friend.reviews_as_friend.count).times do |i| %>
       <% if i.zero? %>
@@ -53,10 +53,12 @@
       <div class="carousel-item <%= "active" if index.zero? %>">
         <div class="card-avatar">
           <div class="card" style="width: 70rem;">
-          <img src="https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg" class="card-img-top" alt="...">
+          <%= cl_image_tag current_user.photo.key, class: "avatar-review", crop: :fill %>
         </div>
         <div class="card-body">
-          <p class="card-text"><%= review.commentary %></p>
+          <div class="card-commentary">
+            <p><%= review.commentary %></p>
+          </div>
           <p class="card-text"><%= '⭐' * review.rating %></p>
           <p class="card-text"><%= current_user.username %></p>
         </div>
