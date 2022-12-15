@@ -52,7 +52,7 @@
     <% @friend.reviews_as_friend.each_with_index do |review, index| %>
       <div class="carousel-item <%= "active" if index.zero? %>">
         <div class="card-avatar">
-          <div class="card" style="width: 70rem;">
+          <div class="card" style="width: 103rem;">
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar-review"%>
           <% end %>
