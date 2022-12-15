@@ -5,21 +5,25 @@
     <p> Get involved and contribute with the guidelines that can help many people who want to settle in another country to receive them and accompany them on their way, in order to help them carry the process of starting a new life more easily.</p>
   </div>
 
-  <div id="form-new-friend">
+  <div>
     <%= simple_form_for(current_user, url: :update_user) do |f| %>
-    <p class = "wordsform"><%= f.input :firstname %></p>
-    <%= f.input :username %>
-    <%= f.input :country, as: :string %>
-    <%= f.association :spoken_languages, input_html: { multiple: true }, as: :check_boxes,  include_hidden: false %>
-    <%= f.input :photo, as: :file %>
-  </div>
-  <div id="form-new-friend">
-      <%= f.input :lastname %>
-      <%= f.input :origin %>
-      <%= f.input :province %>
-      <%= f.association :categories, as: :check_boxes, input_html: { multiple: true }, include_hidden: false %>
-      <%= f.input :about_me %>
-      <%= f.submit value: "Create" %>
+      <div class="friend-form-container">
+        <div class="form-new-friend">
+          <p class = "wordsform"><%= f.input :firstname %></p>
+          <%= f.input :username %>
+          <%= f.input :country, as: :string %>
+          <%= f.association :spoken_languages, input_html: { multiple: true }, as: :check_boxes,  include_hidden: false %>
+          <%= f.input :photo, as: :file %>
+        </div>
+        <div class="form-new-friend">
+          <%= f.input :lastname %>
+          <%= f.input :origin %>
+          <%= f.input :province %>
+          <%= f.association :categories, as: :check_boxes, input_html: { multiple: true }, include_hidden: false %>
+          <%= f.input :about_me %>
+          <%= f.submit "Become a friend!" %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
