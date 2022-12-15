@@ -12,12 +12,21 @@
   font-weight: bold;
   text-align: center;
 }
+
+// .banner p {
+//   font-size: 20px;
+//   color: white;
+//   opacity: .7;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
+
 .container_meeting {
   border-color: #2196f3;
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
+  min-height: 36vh;
 }
 
 .card-meeting {

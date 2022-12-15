@@ -5,7 +5,7 @@
       <img src="https://www.bing.com/th/id/OGC.1bfbf72ae3a5c5679bbbcac6f02f46e8?pid=1.7&rurl=https%3a%2f%2flh5.ggpht.com%2f-r5VA7kTG-lA%2fT6JnSSV1BiI%2fAAAAAAAAExk%2f4yJF6as05nc%2fs00%2fM.gif&ehk=LAZQrj9RrHNCavcNJyE0MDtI%2fLgP9O41amOD4cEGw9Y%3d" alt="world" class="flex-item">
       <h1 class="flex-item">Find a friend to help you settle in your new country.</h1>
     </div>
-    <br>
+
     <p>
       There's a lot to consider when moving overseas. Need of health insurance?
       What identity documents will you need to apply for? Where will you live and
@@ -13,12 +13,12 @@
       provide you with an answer to your questions and accompany you along the
       hard process of moving abroad.
     </p>
-    <br>
+
     <h3><span id="subr"><%= pluralize( @friends.count, 'friend' ) %></span> <%= @friends.count > 1 ? "are" : "is" %> available to give you a hand!</h3>
     <%= link_to "Become a Friend today!", friends_new_path, class: "btn btn_custom_dark" %>
-    <br>
+
   </div> <!-- END intro -->
-<br>
+
 <!-- Filters -->
 <div class="search">
   <%= form_with url: friends_path, method: :get, class: "d-flex" do %>
@@ -46,8 +46,8 @@
     <%= submit_tag "Search",  id: "search-filter" %>
   <% end %>
 </div>
-<br>
-<br>
+
+
 <!-- Cards -->
   <div class = "cards">
 
