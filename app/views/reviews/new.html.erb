@@ -17,7 +17,9 @@
           <div class="d-flex justify-content-center">
             <p> Hey <%=current_user.firstname%>! How did you find your experience with <%=@friend.firstname %><p>
           </div>
-        <%= f.input :commentary %>
+        <div>
+          <%= f.input :commentary %>
+        </div>
         <div class="d-flex justify-content-center">
           <%= f.submit "Send your review", class:"btn btn_custom_dark" %>
         </div>
