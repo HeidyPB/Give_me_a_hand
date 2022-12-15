@@ -12,6 +12,7 @@
   bottom: 0;
   right: 0;
   margin: auto;
+  margin-top: 100px;
 }
 
 // cards from Lewagon UI kit
@@ -57,7 +58,12 @@
 .card-product-infos h2 {
   font-size: 20px;
   padding: 10px;
+  color: #000000;
 }
+
+// subtle differences for cards
+
+
 // ratings (stars)
 #stars {
   margin-bottom: 10 px;
@@ -156,3 +162,12 @@
 }
 
 // filters
+#country, #origin, #spoken_language, #category {
+  background-color: #ffffff;
+  margin: 12px;
+  border-radius: 8px;
+  border-color: #2196f3;
+  border-width: 2px;
+  width: 120px;
+  padding: 5px;
+}

@@ -22,10 +22,11 @@
 <!-- Filters -->
 <div class="search">
   <%= form_with url: friends_path, method: :get, class: "d-flex" do %>
-    <%= select_tag "country",
-      options_for_select(@countries, params[:country]),
-      prompt: "Country"
-    %>
+
+  <%= select_tag "country",
+    options_for_select(@countries, params[:country]),
+    prompt: "Country"
+  %>
 
     <%= select_tag "origin",
       options_for_select(@origins, params[:origin]),
