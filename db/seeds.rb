@@ -90,7 +90,7 @@ users = [
       latitude: 1.1,
       longitude: 111.0
     },
-    languages: ["spanish", "english", "french"],
+    languages: ["spanish", "french"],
     categories: ["education", "coding"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/39506332_zzwdlo.png"
   },
@@ -111,7 +111,7 @@ users = [
       latitude: 2.1,
       longitude: 222.0
     },
-    languages: ["spanish"],
+    languages: ["english", "spanish"],
     categories: ["education", "employment"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954584_mxv5os.jpg"
   },
@@ -132,7 +132,7 @@ users = [
       latitude: 3.1,
       longitude: 333.0
     },
-    languages: ["english"],
+    languages: ["english", "spanish"],
     categories: ["finance"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954282_v4dgs3.jpg"
   },
@@ -153,7 +153,7 @@ users = [
       latitude: 4.1,
       longitude: 444.0
     },
-    languages: ["english","italian"],
+    languages: ["english", "italian"],
     categories: ["real estate"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865814/give%20me%20a%20hand/guacheneguer_naq1zn.jpg"
   },
@@ -170,12 +170,12 @@ users = [
       country: "united states",
       province: "new york",
       address: "new jersey",
-      about_me: "great experience with cryptos i can teach you how to invest smartly",
+      about_me: "great experience with cryptos, I can teach you how to invest smartly",
       latitude: 5.1,
       longitude: 555.0
     },
-    languages: ["english"],
-    categories: ["finance"],
+    languages: ["english", "spanish"],
+    categories: ["finance", "employment"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865429/give%20me%20a%20hand/arrnwrr44ebfchecoh2y_tsawhg.jpg"
   },
 
@@ -195,7 +195,7 @@ users = [
       latitude: 6.1,
       longitude: 666.0
     },
-    languages: ["english","french"],
+    languages: ["english", "french"],
     categories: ["finance"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/115640865_p9509u.png"
   },
@@ -216,7 +216,7 @@ users = [
       latitude: 7.1,
       longitude: 777.0
     },
-    languages: ["english"],
+    languages: ["english", "french"],
     categories: ["finance"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/40340046_ihd3u0.jpg"
   },
@@ -233,13 +233,34 @@ users = [
       country: "france",
       province: "nantes",
       address: "nantes",
-      about_me: "owner of a restaurant chain I can hire you and help rent an apartment nearby",
+      about_me: "owner of a restaurant chain, I can hire you and help rent an apartment nearby",
       latitude: 8.1,
       longitude: 888.0
     },
     languages: ["english", "french"],
     categories: ["real estate"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670949764/give%20me%20a%20hand/marjorie_k5zloa.jpg"
+  },
+
+  {
+    properties: {
+      email: "concorde@hotmail.com",
+      password: "123456",
+      username: "concorde",
+      firstname: "concorde",
+      lastname: "nzeyimana",
+      friend: true,
+      origin: "china",
+      country: "china",
+      province: "pekin",
+      address: "downtown",
+      about_me: "UN official, I can help you with the entities that help immigrants",
+      latitude: 9.1,
+      longitude: 999.0
+    },
+    languages: ["english", "mandarin"],
+    categories: ["real estate"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865427/give%20me%20a%20hand/108844521_abzn2x.jpg"
   },
 
   {
@@ -255,10 +276,10 @@ users = [
       province: "saskatchewan",
       address: "regina",
       about_me: "programming specialist, I will accompany you in your paperwork when you arrive",
-      latitude: 9.1,
-      longitude: 9.0
+      latitude: 9.2,
+      longitude: 9.1
     },
-    languages: ["english","french"],
+    languages: ["english", "french"],
     categories: ["coding"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114943045_hiumnu.jpg"
   }
