@@ -57,21 +57,21 @@ users = [
     properties: {
       email: "heidy@hotmail.com",
       password: "123456",
-      username: "Heidy24",
-      firstname: "Heidy",
-      lastname: "morales",
-      friend: false,
-      origin: "colombia",
-      country: "canada",
-      province: "cartagena",
-      address: "chateau De Saint Felipe",
-      about_me: "i need someone to help me in my immigration process",
-      latitude: 0.1,
-      longitude: 10.01
+      # username: "Heidy24",
+      # firstname: "Heidy",
+      # lastname: "morales",
+      friend: false
+      # origin: "colombia",
+      # country: "canada",
+      # province: "cartagena",
+      # address: "chateau De Saint Felipe",
+      # about_me: "i need someone to help me in my immigration process",
+      # latitude: 0.1,
+      # longitude: 10.01
     },
-    languages: ["spanish", "english", "french"],
-    categories: ["education"],
-    # photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670952721/development/k3286xws4wthn7l510omuoa7x5hc.jpg"
+    # languages: ["spanish", "english", "french"],
+    # categories: ["education"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg"
   },
 
   {
@@ -286,25 +286,29 @@ users = [
 ]
 
 users.each do |user|
-  user_instance = User.create(user[:properties])
-
-  user[:languages].each do |language|
-    UserSpokenLanguage.create!(
-      user: user_instance,
-      spoken_language: languages[language]
-    )
-  end
-
-  user[:categories].each do |category|
-    UserCategory.create!(
-      user: user_instance,
-      category: categories[category]
-    )
-  end
-
+  user_instance = User.new(user[:properties])
   if user[:photo]
     io = URI.open(user[:photo])
-    user_instance.photo.attach(io: io, filename: "nes.png", content_type: "image/png")
+    user_instance.photo.attach(io: io, filename: "avatar.png", content_type: "image/png")
+  end
+  user_instance.save!
+
+  if user[:languages]
+    user[:languages].each do |language|
+      UserSpokenLanguage.create!(
+        user: user_instance,
+        spoken_language: languages[language]
+      )
+    end
+  end
+
+  if user[:categories]
+    user[:categories].each do |category|
+      UserCategory.create!(
+        user: user_instance,
+        category: categories[category]
+      )
+    end
   end
 end
 

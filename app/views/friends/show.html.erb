@@ -59,7 +59,9 @@
       <div class="carousel-item <%= "active" if index.zero? %>">
         <div class="card-avatar">
           <div class="card" style="width: 70rem;">
-          <%= cl_image_tag current_user.photo.key, class: "avatar-review", crop: :fill %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar-review"%>
+          <% end %>
         </div>
         <div class="card-body">
           <div class="card-commentary">
