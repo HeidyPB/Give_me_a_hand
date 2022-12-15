@@ -2,4 +2,32 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 23px;
+  min-height: 78vh;
+}
+
+#textnewf{
+  padding: 15px;
+  word-spacing: 0px;
+
+}
+#textnewf h1{
+  padding: 15px;
+  word-spacing: -10px;
+  font-size: 18;
+
+}
+
+#form-new-friend input {
+  background-color: white;
+  border: 1px solid  #2096F3;
+  opacity: 0.7;
+  text-decoration-color: black;
+}
+
+#form-new-friend{
+  border-color: #2096f3;
+}
+
+.wordsform{
+
 }

@@ -1,17 +1,17 @@
 // container
 .containerindex {
-  padding-bottom: 40px;
-  width:1200px;
-  height: 450px;
+  width: 100vw;
+  min-height: 100vh;
   background: white;
   align-items: center;
-  padding: 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  padding: 0px 40px 40px 40px;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // bottom: 0;
+  // right: 0;
   margin: auto;
+  margin-top: 50px;
 }
 
 // cards from Lewagon UI kit
@@ -37,12 +37,6 @@
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
 .card-product p {
   font-size: 14px;
   line-height: 1.4;
@@ -54,23 +48,19 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
 .card-product-infos h2 {
+
   font-size: 20px;
-  padding: 10px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  color: #000000;
 }
+
 // ratings (stars)
 #stars {
   margin-bottom: 10 px;
 }
-
-// Spoken languages
-//.spoken-language {
-  //border-style: solid;
-  //border-color: #2196f3;
-  //border-radius: 12px;
-  //border-width: 2px;
-  //padding: 3px 10px;
-//}
 
 // miscellaneous
 .intro {
@@ -96,15 +86,11 @@
   color:black;
 }
 
-.intro img {
-  width: 85px;
-}
 #subr {
   font-size: 17px;
   font-weight: bold;
   margin: 0;
   color: #2196f3;
-  text-decoration: underline;
 }
 
 #link {
@@ -116,6 +102,7 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
+
 #link {
   opacity: 1;
 }
@@ -126,12 +113,10 @@
   justify-content: center;
 }
 
-
 .flex-container {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
 }
+
 .btn-flat {
   color: white;
   padding: 1px 24px;
@@ -153,4 +138,48 @@
   background: linear-gradient(#2196f3, #0F60C4);
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
+}
+
+// filters
+#country, #origin, #spoken_language, #category {
+  background-color: #ffffff;
+  margin: 12px;
+  border-radius: 8px;
+  border-color: #2196f3;
+  border-width: 2px;
+  width: 120px;
+  padding: 5px;
+}
+
+#search-filter {
+  border-style: solid;
+
+  //same as filters
+  background-color: #ffffff;
+  margin: 12px;
+  border-radius: 8px;
+  border-color: #2196f3;
+  border-width: 2px;
+  width: 120px;
+  padding: 5px;
+}
+
+// spoken_language & Categories
+.friend-attributes {
+  border-style: solid;
+  background-color: #ffffff;
+  margin: 10px 5px 0px 0px;
+  border-radius: 8px;
+  border-color: #2196f3;
+  border-width: 2px;
+  width: 120px;
+  padding: 5px;
+}
+
+.spacer {
+  margin-top: 15px;
+}
+
+.iconblue {
+  color: #2196f3;
 }

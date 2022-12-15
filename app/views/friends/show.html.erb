@@ -6,15 +6,17 @@
       <%= image_tag('givemeahand.jpg')%>
     <%end%>
     <div class="card-friend-infos">
-      <h1>Friend <%= @friend.username %></h1>
+      <h1>Friend <%= @friend.username.capitalize %></h1>
       <br>
       <h3><%= @friend.firstname.capitalize %> <%= @friend.lastname.capitalize %></h3>
-      <h3><%= @friend.origin.capitalize %></h3>
       <br>
-      <h3>📍<%= @friend.province.capitalize %>, <%= @friend.address.capitalize %></h3>
+      <h3>📍<%= @friend.origin.capitalize %> - <%= @friend.province.capitalize %>, <%= @friend.address.capitalize %></h3>
       <br>
-      <h4>About me: <%= @friend.about_me %></h4>
-       <h3></h3>
+      <h3><i class="fa-solid fa-earth-americas iconblue"></i> Spoken languages:<% @friend.spoken_languages.each do |l| %>
+
+               -<%= l.name.capitalize %>
+
+            <% end %></h3>
   </div>
 </div>
 <br>
@@ -26,10 +28,14 @@
      <li><strong> <%= category.name.capitalize %></strong></li>
     <% end %>
 </div>
-<p>It is a pleasure for me to be able to help you! Do not hesitate to count on me and ask me about what you need.  We are here for you, discover the resources we have to welcome you and accompany you on your way to establish yourself in this country.</p>
+<h5><strong> About me:  <%= @friend.about_me.capitalize %>.</strong></h5>
 <br>
   <%= render "meetings/meeting_modal" %>
   <%= link_to 'New review', review_new_path(@friend), class:"btn btn_custom_dark" %>
+  <a class="btn btn_custom_dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Let's Chat!
+  </a>
+
 <br>
 <br>
 <br>
@@ -82,14 +88,6 @@
 <br>
 
   <!-- Bootstrap Collapse -->
-  <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
-</p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
     <!-- show chatroom -->

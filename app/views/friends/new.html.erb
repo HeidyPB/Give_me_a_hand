@@ -1,36 +1,25 @@
-<%# <br>
-<div class="text-center">
-  <h1>Help someone today by becoming a friend!</h1>
-  <%= render "form", friend: @friend %>
-<%# </div> %> %>
-
 <div class="compartment">
 
-  <div>
+  <div id= "textnewf">
     <h1>Help someone today by becoming a friend</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec ac tellus mi. Fusce euismod eget turpis sed ornare.
-      Pellentesque bibendum ligula non leo dictum,
-      vel elementum velit ullamcorpe
-    </p>
+    <p> Get involved and contribute with the guidelines that can help many people who want to settle in another country to receive them and accompany them on their way, in order to help them carry the process of starting a new life more easily.</p>
   </div>
 
-  <div>
+  <div id="form-new-friend">
     <%= simple_form_for(current_user, url: :update_user) do |f| %>
-      <%= f.input :firstname %>
-      <%= f.input :username %>
-      <%= f.input :country, as: :string %>
-      <%= f.association :spoken_languages, input_html: { multiple: true }, include_hidden: false %>
-      <%= f.input :photo, as: :file %>
+    <p class = "wordsform"><%= f.input :firstname %></p>
+    <%= f.input :username %>
+    <%= f.input :country, as: :string %>
+    <%= f.association :spoken_languages, input_html: { multiple: true }, as: :check_boxes,  include_hidden: false %>
+    <%= f.input :photo, as: :file %>
   </div>
-  <div>
+  <div id="form-new-friend">
       <%= f.input :lastname %>
       <%= f.input :origin %>
       <%= f.input :province %>
-      <%= f.association :categories, input_html: { multiple: true }, include_hidden: false %>
+      <%= f.association :categories, as: :check_boxes, input_html: { multiple: true }, include_hidden: false %>
       <%= f.input :about_me %>
-      <%= f.submit %>
+      <%= f.submit value: "Create" %>
     <% end %>
   </div>
 </div>
