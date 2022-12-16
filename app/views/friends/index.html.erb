@@ -2,10 +2,10 @@
 
   <div class="intro">
     <div class="d-flex align-items-center justify-content-center">
-      <h1 class="flex-item">Find a friend to help you settle in your new country.</h1>
+      <h1 class="flex-item spacedown">Find a friend to help you settle in your new country.</h1>
     </div>
 
-    <p>
+    <p class="spacedown">
       There's a lot to consider when moving overseas. Need of health insurance?
       What identity documents will you need to apply for? Where will you live and
       work? We've been there, and we get it! That's why we've got friends that can
@@ -13,7 +13,7 @@
       hard process of moving abroad.
     </p>
 
-    <h3><span id="subr"><%= pluralize( @friends.count, 'friend' ) %></span> <%= @friends.count > 1 ? "are" : "is" %> available to give you a hand!</h3>
+    <h3 class="spacedown"><span id="subr"><%= pluralize( @friends.count, 'friend' ) %></span> <%= @friends.count > 1 ? "are" : "is" %> available to give you a hand!</h3>
     <%= link_to "Become a Friend today!", friends_new_path, class: "btn btn_custom_dark" %>
 
   </div> <!-- END intro -->
@@ -42,7 +42,7 @@
       prompt: "Category"
     %>
 
-    <%= submit_tag "Search",  id: "search-filter" %>
+    <%= submit_tag "Filter",  class: "btn btn_custom_dark spacer" %>
   <% end %>
 </div>
 
@@ -75,14 +75,14 @@
             <!-- Spoken Languages -->
             <div class="spacer">
               <% friend.spoken_languages.each do |l| %>
-                  <span class="friend-attributes"><i class="fa-solid fa-earth-americas iconblue"></i><%= l.name.capitalize %></span>
+                  <span class="friend-attributes spacecatlang"><i class="fa-solid fa-earth-americas iconblue"></i><%= l.name.capitalize %></span>
               <% end %>
             </div>
 
             <!-- Categories -->
             <div class="spacer">
               <% friend.categories.each do |c| %>
-                <span class="friend-attributes"><i class="fa-solid fa-handshake-angle iconblue"></i><%= c.name.capitalize %></span>
+                <span class="friend-attributes spacecatlang"><i class="fa-solid fa-handshake-angle iconblue"></i><%= c.name.capitalize %></span>
               <% end %>
             </div>
           </div>
@@ -91,7 +91,7 @@
           </div>
 
           <!-- Link to Profile -->
-          <%= link_to "visit profile", friend_path(friend), class: "btn btn_custom_dark spacer"  %>
+          <%= link_to "Visit profile", friend_path(friend), class: "btn btn_custom_dark spacer"  %>
 
         </div> <!-- End card-product-INFOS -->
 

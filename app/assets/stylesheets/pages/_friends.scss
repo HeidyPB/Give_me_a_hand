@@ -183,3 +183,33 @@
 .iconblue {
   color: #2196f3;
 }
+
+.spacecatlang {
+  margin-right: 10px;
+}
+
+// custom
+.spacedown {
+  padding-bottom: 10px;
+}
+
+.search .btn_custom_dark {
+  transform: translateY(0px);
+  transition: 0.3s linear;
+  background:  #2096f3;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #eee;
+  padding:5;
+  margin: auto 0;
+}
+
+.search .btn:hover{
+  transform: translateY(-2px);
+  background-color: #2096f3;
+  color: white;
+  }
