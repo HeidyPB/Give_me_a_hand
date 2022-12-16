@@ -71,23 +71,24 @@
   font-weight: bold;
   margin: 0;
   color: black;
+  padding: 30px;
 }
 
 .intro h3 {
-  font-size: 17px;
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
   color:black;
 }
 
 .intro p {
-  font-size: 14px;
+  font-size: 19px;
   margin: 0;
   color:black;
 }
 
 #subr {
-  font-size: 17px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
   color: #2196f3;
@@ -111,6 +112,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 60px;
 }
 
 .flex-container {
@@ -191,6 +193,7 @@
 // custom
 .spacedown {
   padding-bottom: 10px;
+  justify-content: center;
 }
 
 .search .btn_custom_dark {
