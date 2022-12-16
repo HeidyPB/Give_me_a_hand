@@ -53,16 +53,16 @@
       <div class="carousel-item <%= "active" if index.zero? %>">
         <div class="card-avatar">
           <div class="card" style="width: 103rem;">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar-review"%>
+          <% if review.user.photo.attached? %>
+            <%= cl_image_tag review.user.photo.key, class: "avatar-review"%>
           <% end %>
         </div>
         <div class="card-body">
-          <div class="card-commentary">
+          <div class="card-commentary py-4 w-25 m-auto">
             <p><%= review.commentary %></p>
           </div>
           <p class="card-text"><%= '⭐' * review.rating %></p>
-          <p class="card-text"><%= current_user.username %></p>
+          <p class="card-text"><%= review.user.username %></p>
         </div>
         </div>
       </div>

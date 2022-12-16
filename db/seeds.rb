@@ -55,27 +55,6 @@ puts "Creating users..."
 users = [
   {
     properties: {
-      email: "heidy@hotmail.com",
-      password: "123456",
-      # username: "Heidy24",
-      # firstname: "Heidy",
-      # lastname: "morales",
-      friend: false
-      # origin: "colombia",
-      # country: "canada",
-      # province: "cartagena",
-      # address: "chateau De Saint Felipe",
-      # about_me: "i need someone to help me in my immigration process",
-      # latitude: 0.1,
-      # longitude: 10.01
-    },
-    # languages: ["spanish", "english", "french"],
-    # categories: ["education"],
-    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg"
-  },
-
-  {
-    properties: {
       email: "estuardo@hotmail.com",
       password: '123456',
       username: "stuart",
@@ -93,6 +72,48 @@ users = [
     languages: ["spanish", "french"],
     categories: ["education", "coding"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/39506332_zzwdlo.png"
+  },
+
+  {
+    properties: {
+      email: "alfonso@hotmail.com",
+      password: "123456",
+      username: "chaparro",
+      firstname: "chaparro",
+      lastname: "guacheneger",
+      friend: true,
+      origin: "mexico",
+      country: "mexico",
+      province: "yucatan",
+      address: "cancun",
+      about_me: "I can help you rent an apartment at a good price",
+      latitude: 4.1,
+      longitude: 444.0
+    },
+    languages: ["english", "italian"],
+    categories: ["real estate"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865814/give%20me%20a%20hand/guacheneguer_naq1zn.jpg"
+  },
+
+  {
+    properties: {
+      email: "heidy@hotmail.com",
+      password: "123456",
+      # username: "Heidy24",
+      # firstname: "Heidy",
+      # lastname: "morales",
+      friend: false
+      # origin: "colombia",
+      # country: "canada",
+      # province: "cartagena",
+      # address: "chateau De Saint Felipe",
+      # about_me: "i need someone to help me in my immigration process",
+      # latitude: 0.1,
+      # longitude: 10.01
+    },
+    # languages: ["spanish", "english", "french"],
+    # categories: ["education"],
+    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670866144/give%20me%20a%20hand/113928215_yytfbf.jpg"
   },
 
   {
@@ -135,27 +156,6 @@ users = [
     languages: ["english", "spanish"],
     categories: ["finance"],
     photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865428/give%20me%20a%20hand/114954282_v4dgs3.jpg"
-  },
-
-  {
-    properties: {
-      email: "alfonso@hotmail.com",
-      password: "123456",
-      username: "chaparro",
-      firstname: "chaparro",
-      lastname: "guacheneger",
-      friend: true,
-      origin: "mexico",
-      country: "mexico",
-      province: "yucatan",
-      address: "cancun",
-      about_me: "I can help you rent an apartment at a good price",
-      latitude: 4.1,
-      longitude: 444.0
-    },
-    languages: ["english", "italian"],
-    categories: ["real estate"],
-    photo: "https://res.cloudinary.com/ddwnnuqij/image/upload/v1670865814/give%20me%20a%20hand/guacheneguer_naq1zn.jpg"
   },
 
   {
@@ -311,6 +311,13 @@ users.each do |user|
     end
   end
 end
+
+# creation de reviews
+Review.create!(commentary: 'Thank you so much! ', rating: 4, user: User.fourth, friend: User.first)
+Review.create!(commentary: 'Thank you so much! Amazing! ', rating: 5, user: User.fifth, friend: User.first)
+
+Review.create!(commentary: 'Thank you so much! CHAPARRO', rating: 4, user: User.fourth, friend: User.second)
+Review.create!(commentary: 'Thank you so much! Amazing! CHAPARRO', rating: 5, user: User.fifth, friend: User.second)
 
 Chatroom.create!(name: "general")
 
