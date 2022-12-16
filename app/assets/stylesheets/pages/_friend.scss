@@ -108,8 +108,10 @@ h2 {
   flex-direction: column;
 }
 
-.card{
+.card-review{
   border-color: rgb(251, 249, 249);
+  justify-content: center;
+  display: flex;
 }
 
 .carousel-control-next-icon {
