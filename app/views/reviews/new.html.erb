@@ -8,16 +8,15 @@
   <div class="row">
     <div class="col-xs-4 adjust-nav">
       <%= simple_form_for([@friend, @review], url: review_path(@friend.id)) do |f| %>
-        <br>
         <div class="d-flex justify-content-center">
-          <div class="star">
+          <div class="d-flex align-items-end", class="w-75 p-3">
             <%= f.input :rating, collection: (1..5).to_a, input_html: {data: {controller: "star-rating"}} %>
           </div>
         </div>
           <div class="d-flex justify-content-center">
             <p> Hey <%=current_user.firstname%>! How did you find your experience with <%=@friend.firstname %><p>
           </div>
-        <div>
+        <div class= "d-flex justify-content-center">
           <%= f.input :commentary %>
         </div>
         <div class="d-flex justify-content-center">
