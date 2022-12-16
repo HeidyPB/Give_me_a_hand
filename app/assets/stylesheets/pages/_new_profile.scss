@@ -4,18 +4,35 @@
   grid-template-columns: 1fr 2fr;
   grid-gap: 23px;
   min-height: 78vh;
+  margin-left: 104px;
 }
 
-#textnewf{
-  padding: 15px;
+#container_create{
+padding-top: 50px;
+}
+#textnewf_h1{
+  word-spacing: 6px;
+  font-size: 40px;
+  padding: 35px;
   word-spacing: 0px;
-
+  font-weight: bold;
+  padding-bottom: 17px;
+  padding-top: 90px;
 }
-#textnewf h1{
-  padding: 15px;
-  word-spacing: -10px;
-  font-size: 18;
 
+#textnewf_p{
+  padding: 32px;
+  word-spacing: 3px;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+
+
+
+.form-label {
+  margin-bottom: -0.5rem;
 }
 
 #form-new-friend input {
@@ -23,10 +40,19 @@
   border: 1px solid  #2096F3;
   opacity: 0.7;
   text-decoration-color: black;
+  border-radius: 10px;
+}
+// cajones de form
+.form-control {
+  width: fit-content;
+  border-color: #2096f3;
+  border-width: 1.6px;
+  border-radius: 10px;
+  align-items: center;
 }
 
+
 .form-new-friend{
-  border-color: #2096f3;
   min-width: 26rem;
 }
 
@@ -35,6 +61,31 @@
   justify-content: space-around;
 }
 
-.wordsform{
+.btn_become_a_friend{
+  transform: translateY(0px);
+  transition: 0.3s linear;
+  background:  #2096f3;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #eee;
+  padding:5;
+  margin: auto 0;
+}
 
+.btn:hover{
+  transform: translateY(-6px);
+  background-color: #2096f3;
+  color: white;
+  }
+
+.btn span {
+  transition: transform 0.3s;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 1.2em;
+  margin:0;
 }
