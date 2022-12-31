@@ -145,7 +145,7 @@ Install dependencies
 <img src="https://res.cloudinary.com/dwvrcwjwc/image/upload/v1672427181/Miscellaneous/Give%20me%20a%20hand%20-%20Readme/filter-gmh_uu2qi6.png" alt="logo" width="600" height="auto" />
 
 <p>
-  A friends profile depicts the type of assitance he can provide as well as languages spoken and a short description about himself. Further down the page a carousel shows different reviews submitted by users. A live chatroom is also accessible which will appear in the bottom right corner:
+  A friends profile depicts the type of assistance he can provide as well as languages spoken and a short description about himself. Further down the page a carousel shows different reviews submitted by users. A live chatroom is also accessible which will appear in the bottom right corner:
 </p>
 <img src="https://res.cloudinary.com/dwvrcwjwc/image/upload/v1672342531/Miscellaneous/Give%20me%20a%20hand%20-%20Readme/show-friend_tav27c.png" alt="logo" width="800" height="auto" />
 
